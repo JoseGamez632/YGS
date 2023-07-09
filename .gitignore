@@ -154,11 +154,23 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Pyre type checker
 .pyre/
+
+# pytype static type analyzer
 .pytype/
+
+# Cython debug symbols
 cython_debug/
+
+
 poetry.toml
+
+# ruff
 .ruff_cache/
+
+# LSP config files
 pyrightconfig.json
 
 ### VisualStudioCode ###
@@ -168,7 +180,16 @@ pyrightconfig.json
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
 .history/
+
+# Built Visual Studio Code Extensions
 *.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
 .history
 .ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,django,python
