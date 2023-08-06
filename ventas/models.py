@@ -37,8 +37,8 @@ class Venta(models.Model):
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
     
 class Detalle_Venta(models.Model): #Falta venta_has_clientecol y venta_vent_id "autoincrementable"
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
-    cliente_clie_id = models.ForeignKey(Cliente, on_delete=models.PROTECT, verbose_name="Número de cliente")
+    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta", related_name="NumVenta")
+    cliente_clie_id = models.ForeignKey(Cliente, on_delete=models.PROTECT, verbose_name="Número de cliente", related_name="NumCliente")
     det_vent_precio_unitario = models.IntegerField(verbose_name="Precio unitario de producto")
     det_vent_cantidad = models.IntegerField(verbose_name="Cantidad producto")
     class Estado(models.TextChoices):

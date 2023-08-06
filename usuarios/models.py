@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from ventas.models import Venta
+#from ventas.models import Venta
 
 # Create your models here.
 class Usuario(models.Model): #Falta cliente_id autoinclementable
@@ -28,8 +28,8 @@ class Usuario(models.Model): #Falta cliente_id autoinclementable
         return "%s %s" %(self.usu_nombre, self.usu_apellido)
     
 class Servicios(models.Model):
-    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
+    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name="Usuario")
+    #venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
     serv_nombre = models.CharField(max_length=45, verbose_name="Nombre del servicio")
     serv_codigo = models.CharField(max_length=45, verbose_name="Código del servicio")
     serv_descripcion = models.CharField(max_length=45, verbose_name="Descripción del servicio")
@@ -41,8 +41,8 @@ class Servicios(models.Model):
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
     
 class Productos(models.Model):
-    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
+    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name="Usuario")
+    #venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
     prod_nombre = models.CharField(max_length=45, verbose_name="Nombre del producto")
     prod_codigo = models.CharField(max_length=45, verbose_name="Código del producto")
     prod_descripcion = models.CharField(max_length=45, verbose_name="Descripción del producto")
@@ -56,7 +56,7 @@ class Productos(models.Model):
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
 
 class Insumos(models.Model):
-    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
+    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name="Usuario")
     insum_nombre = models.CharField(max_length=45, verbose_name="Nombre del insumo")
     insum_categoria = models.CharField(max_length=45, verbose_name="Categoría del insumo")
     insum_codigo = models.CharField(max_length=45, verbose_name="Código del insumo")
