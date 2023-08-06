@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from usuarios.models import Usuario
+#from usuarios.models import Usuario
 
 # Create your models here.
 class Cliente(models.Model): #Falta cliente_id autoinclementable
