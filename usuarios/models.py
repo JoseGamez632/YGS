@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from ventas.models import Venta
+#from ventas.models import Venta
 
 # Create your models here.
-class Usuario(models.Model): #Falta cliente_id autoinclementable
+"""class Usuario(models.Model): #Falta cliente_id autoinclementable
     usu_nombre = models.CharField(max_length=45, verbose_name="Nombre usuario")
     usu_apellido = models.CharField(max_length=45, verbose_name="Apellido usuario")
     usu_num_documento = models.CharField(max_length=15, verbose_name="Número de documento")
@@ -29,7 +29,7 @@ class Usuario(models.Model): #Falta cliente_id autoinclementable
     
 class Servicios(models.Model):
     usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
+    #venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
     serv_nombre = models.CharField(max_length=45, verbose_name="Nombre del servicio")
     serv_codigo = models.CharField(max_length=45, verbose_name="Código del servicio")
     serv_descripcion = models.CharField(max_length=45, verbose_name="Descripción del servicio")
@@ -42,7 +42,7 @@ class Servicios(models.Model):
     
 class Productos(models.Model):
     usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
+    #venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta")
     prod_nombre = models.CharField(max_length=45, verbose_name="Nombre del producto")
     prod_codigo = models.CharField(max_length=45, verbose_name="Código del producto")
     prod_descripcion = models.CharField(max_length=45, verbose_name="Descripción del producto")
@@ -69,3 +69,4 @@ class Insumos(models.Model):
         ACTIVO='1', _('Activo')
         INACTIVO='0', _('Inactivo')
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
+  """
