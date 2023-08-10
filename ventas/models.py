@@ -26,7 +26,7 @@ class Cliente(models.Model): #Falta cliente_id autoinclementable
         return "%s %s" %(self.clie_nombre, self.clie_apellido)
     
 class Venta(models.Model):
-    usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
+    usu_id = models.ForeignKey(Usuario, verbose_name="Usuario", on_delete=models.PROTECT, related_name='Usuario')
     vent_fecha = models.DateField(verbose_name="Fecha de venta")
     vent_precio_subtotal = models.IntegerField(verbose_name="Precio subtotal")
     vent_iva = models.IntegerField(verbose_name="IVA")
@@ -37,7 +37,7 @@ class Venta(models.Model):
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
     
 class Detalle_Venta(models.Model): #Falta venta_has_clientecol y venta_vent_id "autoincrementable"
-    venta_vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta", related_name="NumVenta")
+    vent_id = models.ForeignKey(Venta, on_delete=models.PROTECT, verbose_name="Número de venta", related_name="NumVenta")
     cliente_clie_id = models.ForeignKey(Cliente, on_delete=models.PROTECT, verbose_name="Número de cliente", related_name="NumCliente")
     det_vent_precio_unitario = models.IntegerField(verbose_name="Precio unitario de producto")
     det_vent_cantidad = models.IntegerField(verbose_name="Cantidad producto")
