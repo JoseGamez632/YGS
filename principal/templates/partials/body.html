@@ -1,0 +1,25 @@
+{% load static %}
+
+<!-- aquí empieza el body-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+    {% block titulo %}
+        
+    {% endblock titulo %}
+        Django website</title>
+</head>
+<body>
+    {% include 'partials/header.html' %}
+    {% block contenido %}
+
+    {% endblock contenido %}
+
+    {% include 'partials/footer.html' %}
+
+</body>
+</html>
+<!-- aquí termina el body-->

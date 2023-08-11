@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 
 def hola_mundo(request):
-    nombre = "Jose",
-    apellido = "Gamez",
+    nombre = "Jose"
+    apellido = "Gamez"
     telefono = "83892394"
 
     context={

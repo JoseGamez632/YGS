@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ventas',
     'usuarios',
     'compras',
+    'bootstrap5', # pip install django-bootstrap-v5
 ]
 
 MIDDLEWARE = [

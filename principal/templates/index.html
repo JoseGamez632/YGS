@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primero proyecto Django</title>
-</head>
-<body>
-    <h1>Hola mundo, Bienvenido {{ nombres }} {{apellidos}}</h1>
-    <h2>Mi numero de telefonos es {{ telefonos }}</h2>
-</body>
-</html>
+{% extends 'partials/body.html' %}
+
+
+{% block contenido %}
+    <h1>Hola mundo, bienvenido {{nombres}} {{apellidos}}</h1>
+    <h2> teléfono: {{telefonos}}</h2>
+{% endblock contenido %}
+
+
+{% block titulo %}
+    {{apellidos}}
+{% endblock titulo %}
+    
