@@ -1,4 +1,8 @@
 {% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
 
 <!-- aquí empieza el body-->
 <!DOCTYPE html>
@@ -14,12 +18,12 @@
 </head>
 <body>
     {% include 'partials/header.html' %}
+
     {% block contenido %}
-
     {% endblock contenido %}
-
+    
     {% include 'partials/footer.html' %}
-
+    
 </body>
 </html>
 <!-- aquí termina el body-->
