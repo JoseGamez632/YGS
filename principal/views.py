@@ -13,3 +13,17 @@ def hola_mundo(request):
 
     }
     return render(request, "index.html", context)
+
+def indexAugusto(request):
+
+    context={
+
+    }
+    return render(request, "indexAugusto.html", context)
+
+def indexAugusto2(request):
+
+    context={
+
+    }
+    return render(request, "indexAugusto2.html", context)
