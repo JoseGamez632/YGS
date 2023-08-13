@@ -1,6 +1,7 @@
 {% extends 'partials/body.html' %}
-
+{% load static %}
 {% block contenido %}
+
 <main>
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -21,12 +22,10 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/Paris.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -43,12 +42,49 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/puente-madera.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
+
+                        <div class="card-body">
+                            <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                                una introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/familia1.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                        <div class="card-body">
+                            <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
+                                una introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/camping.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -65,12 +101,10 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/chica-rodeada-peces-mar.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -87,12 +121,10 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/mujer-caminando.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -109,12 +141,10 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/familia2.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -131,12 +161,10 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/venecia.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
                         </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
@@ -153,57 +181,10 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            src="{% static 'img/pareja.jpg' %}" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-                        <div class="card-body">
-                            <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
-                                una introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-                        <div class="card-body">
-                            <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
-                                una introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
                         <div class="card-body">
                             <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como
                                 una introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
