@@ -2,4 +2,190 @@
 {% load static %}
 
 {% block contenido %}
+<!-- Inicia el main -->
+    <section class="pantalla-inicio">
+
+        <div class="row">
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGPROVEEDORES.jpg' %});
+                  height: 400px;">
+                  
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Proveedores</h1>
+                      <a class="btn btn-outline-light btn-lg" href="proveedores.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGCOMPRAS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Compras</h1>
+                      <a class="btn btn-outline-light btn-lg" href="compras.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGPRODUCTOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Productos</h1>
+                      <a class="btn btn-outline-light btn-lg" href="productos.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGVENTAS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Ventas</h1>
+                      <a class="btn btn-outline-light btn-lg" href="{% url 'ventas' %}" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGCLIENTES.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Clientes</h1>
+                      <a class="btn btn-outline-light btn-lg" href="clientes.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGINSUMOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Insumos</h1>
+                      <a class="btn btn-outline-light btn-lg" href="insumos.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGSERVICIOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Servicios</h1>
+                      <a class="btn btn-outline-light btn-lg" href="servicios.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header>
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGUSUARIOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Usuarios</h1>
+                      <a class="btn btn-outline-light btn-lg" href="{% url 'usuarios' %}" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+        </div>
+  
+      </section>
+<!-- Finaliza el main -->
 {% endblock contenido %}
+
+
+{% block titulo %}
+    {{apellidos}}
+{% endblock titulo %}
+

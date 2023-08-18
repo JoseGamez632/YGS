@@ -17,8 +17,8 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="background-image: url(https://img.freepik.com/vector-gratis/fondo-blanco-minimo-hexagonos_79603-1452.jpg?w=1380&t=st=1687031635~exp=1687032235~hmac=b6edce497094422b856cdb7557bebe7d81f867068ee451ccbd9e7f3f9631595b); opacity: 90%; ">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <img src="{% static 'img/IMG LOGO.jpg'%}" height="85" alt="Logo">
+            <a href="{% url 'inicio' %}" class="navbar-brand">
+                <img src="{% static 'img/IMGLOGO.png'%}" height="85" alt="Logo">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -28,11 +28,11 @@
                     <a href="proveedores.html" class="nav-item nav-link">Proveedores</a>
                     <a href="compras.html" class="nav-item nav-link">Compras</a>
                     <a href="productos.html" class="nav-item nav-link">Productos</a>
-                    <a href="ventas.html" class="nav-item nav-link">Ventas</a>
-                    <a href="insumos.html" class="nav-item nav-link">Cliente</a>
+                    <a href="{% url 'ventas' %}" class="nav-item nav-link">Ventas</a>
+                    <a href="clientes.html" class="nav-item nav-link">Cliente</a>
                     <a href="insumos.html" class="nav-item nav-link">Insumos</a>
                     <a href="servicios.html" class="nav-item nav-link">Servicios</a>
-                    <a href="#" class="nav-item nav-link" tabindex="-1">Usuarios</a>
+                    <a href="{% url 'usuarios' %}" class="nav-item nav-link">Usuarios</a>
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a href="login.html" class="nav-item nav-link">Cerrar Sesión</a>
