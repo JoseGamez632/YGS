@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
-
-def hola_mundo(request):
+def inicio(request):
     nombre = "Jose"
     apellido = "Gamez"
     telefono = "83892394"
@@ -13,3 +12,14 @@ def hola_mundo(request):
 
     }
     return render(request, "index.html", context)
+
+def ventas(request):
+    context={
+    }
+    return render(request, "ventas.html", context)
+
+
+def usuarios(request):
+    context={
+    }
+    return render(request, "usuarios.html", context)
