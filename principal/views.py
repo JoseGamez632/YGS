@@ -18,8 +18,13 @@ def ventas(request):
     }
     return render(request, "ventas.html", context)
 
-
 def usuarios(request):
     context={
     }
     return render(request, "usuarios.html", context)
+
+def compras(request):
+    context={
+    }
+    return render(request, "compras.html", context)
+
