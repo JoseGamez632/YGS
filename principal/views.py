@@ -1,25 +1,23 @@
 from django.shortcuts import render
 
 def inicio(request):
-    nombre = "Jose"
-    apellido = "Gamez"
-    telefono = "83892394"
-
+    titulo = "Inicio"
     context={
-        'nombres':nombre,
-        'apellidos':apellido,
-        'telefonos':telefono
-
+        'titulo':titulo
     }
     return render(request, "index.html", context)
 
 def ventas(request):
+    titulo = "Ventas"
     context={
+        'titulo':titulo
     }
-    return render(request, "ventas.html", context)
+    return render(request, "ventas/ventas.html", context)
 
 
 def usuarios(request):
+    titulo = "Usuarios"
     context={
+        'titulo':titulo
     }
-    return render(request, "usuarios.html", context)
+    return render(request, "usuarios/usuarios.html", context)

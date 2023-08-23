@@ -24,11 +24,7 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> 
-    {% block titulo %}
-        
-    {% endblock titulo %}
-        Django website</title>
+    <title>GestiónYGS | {{titulo}}</title>
 </head>
 <body style="background-image: url({% static 'img/fondoWeb1.jpg' %}); background-repeat: no-repeat; background-size: cover; backdrop-filter:blur (100px);background-position: center;">
     {% include 'partials/header.html' %}
