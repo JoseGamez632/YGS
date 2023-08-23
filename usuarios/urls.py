@@ -3,4 +3,5 @@ from usuarios.views import usuarios
 
 urlpatterns = [
     path('',usuarios,name="usuarios"),
+    path('',usuarios,name="usuarios"),
 ]
