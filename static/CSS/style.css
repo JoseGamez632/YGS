@@ -1,0 +1,133 @@
+
+
+.aplicarFilt{
+  background-color:rgb(77, 16, 134);
+  position: fixed;
+  bottom: 50px;
+  left: 150px;
+}
+
+.offcanvas offcanvas-start{
+
+}
+
+.floating-button {
+  margin-top: 5%;
+  margin-left: 40%;
+  background-color: #de8a13f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 12%;
+  width: 15%;
+  padding: 10px 10px;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.floating-button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.tablaProveedores{
+  margin: 50px;
+}
+
+.tablaProductos{
+  margin: 50px;
+}
+
+th, thead{
+  position: sticky;
+  top: 0;
+}
+
+#dropdownMenu {
+  text-align: center;
+}
+
+#SuptitulosFiltro {
+  font-family:verdana;
+  font-size:50px;
+  color:white;
+  text-shadow: 1px  0px 0px rgb(255, 255, 255),
+               0px  1px 0px rgb(255, 255, 255),
+              -1px  0px 0px rgb(255, 255, 255),
+               0px -1px 0px rgb(255, 255, 255);
+}
+
+
+
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: #fccb90;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+.gradient-form {
+height: 100vh !important;
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+ /* BOTON DE ACTIVADO Y DESACTIVADO */
+.onoffswitch {
+  position: relative; width: 110px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "Activado";
+  padding-left: 10px;
+  background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "Desactivado";
+  padding-right: 10px;
+  background-color: #EEEEEE; color: #999999;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block; width: 18px; margin: 6px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 56px;
+  border: 2px solid #999999; border-radius: 20px;
+  transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; 
+}
+.icon_index{
+  animation:icon_index 0.8s; } @keyframes icon_index{ 0%{transform:scale(.5)} 100%{transform:scale(1)} 
+}

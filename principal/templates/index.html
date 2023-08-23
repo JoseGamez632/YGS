@@ -1,167 +1,186 @@
 {% extends 'partials/body.html' %}
-
 {% load static %}
 
 {% block contenido %}
 <!-- Inicia el main -->
-<main>
-    <div id="myCarousel" class="carousel slide h-50" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static 'img/puente-madera.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Ejemplo de encabezado.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la primera
-                            diapositiva del carrusel.
-                        </p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Regístrate hoy</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static 'img/mujer-caminando.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Otro titular de ejemplo.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la segunda
-                            diapositiva del carrusel.
-                        </p>
-                        <p>
-                            <a class="btn btn-lg btn-primary" href="#">Más información</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static 'img/chica-rodeada-peces-mar.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>Uno más por si acaso.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la tercera
-                            diapositiva de este carrusel.
-                        </p>
-                        <p>
-                            <a class="btn btn-lg btn-primary" href="#">Explorar galería</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
+    <section class="pantalla-inicio">
 
-    <div class="container marketing">
+        <div class="row" style="margin-bottom: 1%; margin-top: 1%;">
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div 
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGPROVEEDORES.jpg' %});
+                  height: 400px;">
+                  
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Proveedores</h1>
+                      <a class="btn btn-outline-light btn-lg" href="proveedores.html" role="button" class="respons" style="font-size: 1.5vw; "
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGCOMPRAS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Compras</h1>
+                      <a class="btn btn-outline-light btn-lg" href="compras.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGPRODUCTOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Productos</h1>
+                      <a class="btn btn-outline-light btn-lg" href="productos.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGVENTAS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Ventas</h1>
+                      <a class="btn btn-outline-light btn-lg" href="{% url 'ventas' %}" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+        </div>
+  
         <div class="row">
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="40%" height="40%"
-                src="{% static 'img/puente-madera.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <h2>Encabezado</h2>
-                <p>
-                    Algo de contenidoplaceholder representativo para las tres columnas de
-                    texto debajo del carrusel. Esta es la primera columna.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
-            </div>
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="40%" height="40%"
-                src="{% static 'img/mujer-caminando.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <h2>Encabezado</h2>
-                <p>
-                    Otro fragmento emocionante de contenidoplaceholder representativo.
-                    Esta vez, pasamos a la segunda columna.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
-            </div>
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="40%" height="40%"
-                src="{% static 'img/chica-rodeada-peces-mar.jpg' %}" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <h2>Encabezado</h2>
-                <p>
-                    Y, por último, esta, la tercera columna de contenidoplaceholder
-                    representativo.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
-            </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGCLIENTES.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Clientes</h1>
+                      <a class="btn btn-outline-light btn-lg" href="clientes.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGINSUMOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Insumos</h1>
+                      <a class="btn btn-outline-light btn-lg" href="insumos.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGSERVICIOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Servicios</h1>
+                      <a class="btn btn-outline-light btn-lg" href="servicios.html" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
+          <div class="col-3">
+            <header class="icon_index">
+              <!-- Background image -->
+              <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: url({% static 'img/IMGUSUARIOS.jpg' %});
+                  height: 400px;">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                      <h1 style="font-size: 3vw;">Usuarios</h1>
+                      <a class="btn btn-outline-light btn-lg" href="{% url 'usuarios' %}" role="button" class="respons" style="font-size: 1.5vw;"
+                        >INGRESAR</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Background image -->
+            </header>
+          </div>
         </div>
-
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">
-                    Encabezado del primer reportaje.
-                    <span class="text-muted">Te dejará boquiabierto.</span>
-                </h2>
-                <p class="lead">
-                    Excelente contenido de marcador de posición para el primer artículo
-                    aquí. Imagina algo de prosa emocionante aquí.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/Paris.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">
-                    Oh, sí, es tan bueno. <span class="text-muted">Míralo tú mismo.</span>
-                </h2>
-                <p class="lead">
-                    ¿Otro reportaje? Por supuesto. Más contenido de marcador de posición
-                    aquí para darle una idea de cómo funcionaría este diseño con algún
-                    contenido del mundo real en su lugar.
-                </p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/pareja.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">
-                    Y por último, este. <span class="text-muted">Jaque mate.</span>
-                </h2>
-                <p class="lead">
-                    Y sí, este es el último bloque de contenido de marcador de posición
-                    representativo. Una vez más, no está destinado a ser leído realmente,
-                    simplemente aquí para darle una mejor vista de cómo se vería esto con
-                    algún contenido real. Tu contenido.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/venecia.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-    </div>
-</main>
+  
+      </section>
 <!-- Finaliza el main -->
 {% endblock contenido %}
 
@@ -169,3 +188,4 @@
 {% block titulo %}
     {{apellidos}}
 {% endblock titulo %}
+

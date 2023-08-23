@@ -1,11 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario</title>
-</head>
-<body>
-    <h1>Esta es la APPS Usuarios</h1> 
-</body>
-</html>
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="container">
+    <!-- Botón agegar nuevo usuario.  -->
+    <section class="proveedores y filt" >
+        <!-- Contenido de off canvas  -->
+        <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
+        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+          
+          <div class="offcanvas-body">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus" style="color: white;"></i> Nuevo usuario</h3>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="mb-3" size="20">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un nombre para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre y apellido</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un NIT para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Numero de documento</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un teléfono para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Cargo</option>
+                  <option value="1">Vendedor</option>
+                  <option value="2">Administrador</option>
+                  <option value="3">Almacenista</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Permisos usuario</option>
+                  <option value="1">Administrador</option>
+                  <option value="2">Solo ingreso de información</option>
+                  <option value="3">Solo visualizar información</option>
+                </select>
+              </div>
+            </div>
+            <center>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Crear usuario</button>
+              </div>
+            </center>
+          </div>
+          
+        </div>
+        <!-- Contenido de off canvas, end.  -->
+        </div>
+      </section>
+      <!-- Perfiles Usuarios.  -->
+      <section>
+        <div>     
+          <button class="floating-button" class="btn btn-warning btn-rounded"
+          type="button" data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar nuevo usuario
+          </button>
+        </div>
+        <center>
+          <div class="mb-3" size="20" style="opacity: 90%;" > <br>
+            <div class="container"> 
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Jose Gamez</h5>
+                      <p class="card-text">
+                        Cargo: Dueño Administrador.<br>
+                        Administrador.<br>
+                        Usuario activo.<br>
+                      </p>
+                      <center>
+                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
+                      </center>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Augusto Ortiz</h5>
+                      <p class="card-text">
+                        Cargo: Dueño Administrador.<br>
+                        Administrador.<br>
+                        Usuario desactivado.<br>
+                      </p>
+                      <center>
+                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
+                      </center>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Augusto Ortiz</h5>
+                      <p class="card-text">
+                        Cargo: Dueño Administrador.<br>
+                        Administrador.<br>
+                        Usuario desactivado.<br>
+                      </p>
+                      <center>
+                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
+                      </center>
+                    </div>
+                  </div>
+                </div>              <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Augusto Ortiz</h5>
+                      <p class="card-text">
+                        Cargo: Dueño Administrador.<br>
+                        Administrador.<br>
+                        Usuario desactivado.<br>
+                      </p>
+                      <center>
+                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
+                      </center>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </center>
+      </section>
+    <!-- Botón Modificar proveedor.  -->
+    <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificar Usuario</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          </div >
+          <div class="modal-body" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+            <div class="mb-3" size="20">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un nombre para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre y apellido</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un NIT para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Numero de identificación</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <div class="valid-feedback">
+                  ¡Dato Valido!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, elije un teléfono para el proveedor.
+                </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Cargo</option>
+                  <option value="1">Vendedor</option>
+                  <option value="2">Administrador</option>
+                  <option value="3">Almacenista</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Permisos usuario</option>
+                  <option value="1">Administrador</option>
+                  <option value="2">Solo ingreso de información</option>
+                  <option value="3">Solo visualizar información</option>
+                </select>
+              </div>
+              <center>
+                <h4 style="color: white;">
+                  Estado de usuario
+                </h4>
+              </center>
+              <div class="mb-3">
+                <center>
+                  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger">Inhabilitado</button>
+                    <button type="button" class="btn btn-warning">Eliminar</button>
+                    <button type="button" class="btn btn-success">Activado</button>
+                  </div>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock contenido %}
