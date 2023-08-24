@@ -1,0 +1,563 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+<!-- Botón agegar nuevo producto.  -->
+<section class="Proveedores y filt">
+
+
+    <!-- Contenido de off canvas  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+
+
+
+        <div class="offcanvas-body">
+
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus"
+                        style="color: white;"></i> Datos Producto</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido Por favor, indique un nombre para el producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, Por favor, ingrese el precio de venta del producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, Por favor, ingrese el costo del producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Costo del producto</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, por favor, indique la cantidad disponible del producto en el inventario.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Cantidad disponible</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, por favor, ingrese el código del producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Código del producto</label>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione la categoría del producto</option>
+                        <option value="1">Tapicería</option>
+                        <option value="2">Muebles</option>
+                        <option value="3">Camas</option>
+                    </select>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, por favor, ingrese el código de barras del producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Código de barras</label>
+                </div>
+            </div>
+            <center>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+            </center>
+        </div>
+
+    </div>
+    <!-- Contenido de off canvas, end.  -->
+    </div>
+</section>
+<!-- Tabla.  -->
+<section class="tablaProductos" <div class="containes">
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
+                        class="fa-solid fa-box-archive" style="color: #ffffff;"></i> Agregar Producto
+                </button>
+                <table id="table_id" class="display">
+                    <font></font>
+                    <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <th>Nombre del producto</th>
+                            <font></font>
+                            <th>Precio de venta</th>
+                            <font></font>
+                            <th>Costo del producto</th>
+                            <font></font>
+                            <th>Cantidad</th>
+                            <font></font>
+                            <th>Código del producto</th>
+                            <font></font>
+                            <th>Categoría</th>
+                            <font></font>
+                            <th>Código de barras</th>
+                            <font></font>
+                            <th>Editar</th>
+                            <font></font>
+                            <th>Estado actual</th>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                    </thead>
+                    <font></font>
+                    <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_Productos"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponible</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+
+                    </tbody>
+                    <font></font>
+                </table>
+                <font></font>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Botón Modificar producto.  -->
+<div class="modal fade" id="edit_emergente_Productos" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                        class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Productos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"
+                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                <div class="mb-3" size="20">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, por favor, indique el nombre para el producto.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, Por favor, ingrese el precio de venta del producto.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, Por favor, ingrese el costo del producto.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Costo del
+                            producto</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, por favor, indique la cantidad disponible del producto en el inventario.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Cantidad
+                            disponible</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, por favor, ingrese el código del producto.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Código del
+                            producto</label>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione la categoría del producto</option>
+                            <option value="1">Tapicería</option>
+                            <option value="2">Muebles</option>
+                            <option value="3">Camas</option>
+                        </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, por favor, ingrese el código de barras del producto.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Código de barras</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary"
+                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

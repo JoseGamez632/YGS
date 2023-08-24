@@ -1,0 +1,476 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+<!-- Botón agegar nuevo servicio.  -->
+<section class="proveedores y filt">
+    <!-- Contenido de off canvas  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+
+        <div class="offcanvas-body">
+
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-screwdriver-wrench"
+                        style="color: #ffffff;"></i> Datos Servicio</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre servicio</label>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Categoria</option>
+                        <option value="1">Mantenimiento</option>
+                        <option value="2">Restauración</option>
+                        <option value="3">Limpieza</option>
+                        <option value="4">Ensamble</option>
+                    </select>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Pago Servicio Eje:
+                        50.000</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" style="color: white;">Descripción del servicio</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <center>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+            </center>
+        </div>
+
+    </div>
+    <!-- Contenido de off canvas, end.  -->
+    </div>
+</section>
+<!-- Tabla.  -->
+<section class="tablaProveedores" <div class="containes">
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
+                        class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i> Agregar Nuevo Servicio
+                </button>
+                <table id="table_id" class="display">
+                    <font></font>
+                    <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <th>ID Servicio</th>
+                            <font></font>
+                            <th>Fecha Servicio</th>
+                            <font></font>
+                            <th>Nombre Servicio</th>
+                            <font></font>
+                            <th>Categoria</th>
+                            <font></font>
+                            <th>Descripción</th>
+                            <font></font>
+                            <th>Pago Servicio</th>
+                            <font></font>
+                            <th>Editar</th>
+                            <font></font>
+                            <th>Estado<br>actual</th>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                    </thead>
+                    <font></font>
+                    <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>0001</td>
+                            <font></font>
+                            <td>12/31/2023</td>
+                            <font></font>
+                            <td>Cambio espaldar silla</td>
+                            <font></font>
+                            <td>Mantenimiento</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                    data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info"
+                                        style="color: #de8b13;"></i>
+                                </button>
+                            </td>
+                            <font></font>
+                            <td>75.000</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+
+                    </tbody>
+                    <font></font>
+                </table>
+                <font></font>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Botón Editar Servicio.  -->
+<div class="modal fade modal fade-sm" id="edit_detall_compra" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                        class="fa-solid fa-screwdriver-wrench" style="color: #de8b13;"></i> Modificar Información
+                    Servicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"
+                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                <div class="mb-3" size="20">
+                    <div class="mb-3" size="20">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un teléfono para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
+                                servicio</label>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Categoria</option>
+                                <option value="1">Mantenimiento</option>
+                                <option value="2">Restauración</option>
+                                <option value="3">Limpieza</option>
+                                <option value="4">Ensamble</option>
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un teléfono para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Pago Servicio Eje:
+                                50.000</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1" style="color: white;">Descripción del
+                                servicio</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary"
+                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Botón Descripción Servicio.  -->
+<div class="modal fade modal fade-sm" id="detalle_servicios" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                        class="fa-solid fa-circle-exclamation" style="color: #de8b13;"></i> Descripción servicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"
+                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                <div class="alert alert-warning" role="alert">
+                    Relleno y acolchado:<br><br>
+                    Se agrega el relleno adecuado para darle comodidad y forma al mueble.
+                    Dependiendo del diseño y el estilo deseado, se pueden utilizar diferentes capas de relleno, como
+                    espuma, algodón, plumas o fibra sintética.
+                    Se utilizan técnicas de acolchado para crear diseños y formas específicas en el mueble, como
+                    capstone o costuras decorativas.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

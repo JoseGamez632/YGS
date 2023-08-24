@@ -1,30 +1,51 @@
 from django.shortcuts import render
 
 def inicio(request):
-    nombre = "Jose"
-    apellido = "Gamez"
-    telefono = "83892394"
-
+    titulo = "Inicio"
     context={
-        'nombres':nombre,
-        'apellidos':apellido,
-        'telefonos':telefono
-
+        'titulo':titulo
     }
     return render(request, "index.html", context)
 
 def ventas(request):
+    titulo = "Ventas"
     context={
+        'titulo':titulo
     }
-    return render(request, "ventas.html", context)
+    return render(request, "ventas/ventas.html", context)
+
 
 def usuarios(request):
+    titulo = "Usuarios"
     context={
+        'titulo':titulo
     }
-    return render(request, "usuarios.html", context)
+    return render(request, "usuarios/usuarios.html", context)
 
-def compras(request):
+def insumos(request):
+    titulo = "Insumos"
     context={
+        'titulo':titulo
     }
-    return render(request, "compras.html", context)
+    return render(request, "usuarios/insumos.html", context)
 
+def servicios(request):
+    titulo = "Servicios"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "usuarios/servicios.html", context)
+
+def productos(request):
+    titulo = "Productos"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "usuarios/productos.html", context)
+
+def proveedores(request):
+    titulo = "proveedores"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "compras/proveedores.html", context)
