@@ -49,3 +49,10 @@ def proveedores(request):
         'titulo':titulo
     }
     return render(request, "compras/proveedores.html", context)
+
+def clientes(request):
+    titulo = "Clientes"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "ventas/Clientes.html", context)
