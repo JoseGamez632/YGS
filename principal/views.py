@@ -63,3 +63,10 @@ def compras(request):
         'titulo':titulo
     }
     return render(request, "compras/compras.html", context)
+
+def login(request):
+    titulo = "Insumos"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "login.html", context)
