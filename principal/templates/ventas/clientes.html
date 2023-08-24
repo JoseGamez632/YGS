@@ -1,0 +1,475 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+<!-- Botón agegar nuevo Cliente.  -->
+<section class="proveedores y filt">
+    <!-- Contenido de off canvas  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+
+        <div class="offcanvas-body">
+
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-user-plus"
+                        style="color: #ffffff;"></i> Datos Clientes</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Cliente</label>
+                </div>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Apellido Cliente</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipo Documento</option>
+                    <option value="1">C.c</option>
+                    <option value="2">T.I</option>
+                    <option value="3">C.E</option>
+                    <option value="4">P.E.P</option>
+                </select>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Numero Documento</label>
+                </div>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Numero Celuar</label>
+                </div>
+            </div>
+            <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un teléfono para el proveedor.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Correo Electronico</label>
+                </div>
+                <center>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                    </div>
+                </center>
+            </div>
+
+        </div>
+        <!-- Contenido de off canvas, end.  -->
+    </div>
+    <section class="tablaProveedores" <div class="containes">
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <!-- Botón Agregar nuevo cliente.  -->
+                    <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
+                            class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Nuevo Cliente
+                    </button>
+                    <!-- Botón Agregar nuevo cliente.  -->
+                    <table id="table_id" class="display">
+                        <font></font>
+                        <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <th>Nombre Cliente</th>
+                                <font></font>
+                                <th>Apellido Cliente</th>
+                                <font></font>
+                                <th>Tipo Documento</th>
+                                <font></font>
+                                <th>Numero Documento</th>
+                                <font></font>
+                                <th>Numero Celular</th>
+                                <font></font>
+                                <th>Correo Electronico</th>
+                                <font></font>
+                                <th>Editar</th>
+                                <font></font>
+                                <th>Estado<br>actual</th>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                        </thead>
+                        <font></font>
+                        <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+                            <tr>
+                                <font></font>
+                                <td>Damian</td>
+                                <font></font>
+                                <td>Orduz</td>
+                                <font></font>
+                                <td>C.I</td>
+                                <font></font>
+                                <td>10245245256</td>
+                                <font></font>
+                                <td>3105482495</td>
+                                <font></font>
+                                <td>@gmail.com</td>
+                                <font></font>
+                                <td>
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                            style="color: green;"></i></button>
+                                <td>
+                                    <!-- Checked switch -->
+                                    <div class="form-check form-check-inline form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                    </div>
+                                </td>
+                                <font></font>
+                            </tr>
+                            <font></font>
+
+                        </tbody>
+                        <font></font>
+                    </table>
+                    <font></font>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Botón Editar Cliente.  -->
+    <div class="modal fade modal fade-sm" id="edit_detall_compra" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                            class="fa-solid fa-screwdriver-wrench" style="color: #de8b13;"></i> Modificar Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"
+                    style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                    <div class="mb-3" size="20">
+                        <div class="mb-3" size="20">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com" required>
+                                <div class="valid-feedback">
+                                    ¡Dato Valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, elije un teléfono para el proveedor.
+                                </div>
+                                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
+                                    Cliente</label>
+                            </div>
+                        </div>
+                        <div class="mb-3" size="20">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com" required>
+                                <div class="valid-feedback">
+                                    ¡Dato Valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, elije un teléfono para el proveedor.
+                                </div>
+                                <label for="floatingInput" for="validationCustom01" class="form-label">Apellido
+                                    Cliente</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Tipo Documento</option>
+                                <option value="1">C.c</option>
+                                <option value="2">T.I</option>
+                                <option value="3">C.E</option>
+                                <option value="4">P.E.P</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" size="20">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com" required>
+                                <div class="valid-feedback">
+                                    ¡Dato Valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, elije un teléfono para el proveedor.
+                                </div>
+                                <label for="floatingInput" for="validationCustom01" class="form-label">Numero
+                                    Documento</label>
+                            </div>
+                        </div>
+                        <div class="mb-3" size="20">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com" required>
+                                <div class="valid-feedback">
+                                    ¡Dato Valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, elije un teléfono para el proveedor.
+                                </div>
+                                <label for="floatingInput" for="validationCustom01" class="form-label">Numero
+                                    Celuar</label>
+                            </div>
+                        </div>
+                        <div class="mb-3" size="20">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com" required>
+                                <div class="valid-feedback">
+                                    ¡Dato Valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, elije un teléfono para el proveedor.
+                                </div>
+                                <label for="floatingInput" for="validationCustom01" class="form-label">Correo
+                                    Electronico</label>
+                            </div>
+                            <center>
+                                <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+{% endblock contenido %}
