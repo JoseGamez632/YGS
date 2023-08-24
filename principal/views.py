@@ -56,3 +56,10 @@ def clientes(request):
         'titulo':titulo
     }
     return render(request, "ventas/Clientes.html", context)
+
+def compras(request):
+    titulo = "Insumos"
+    context={
+        'titulo':titulo
+    }
+    return render(request, "compras/compras.html", context)
