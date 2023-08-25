@@ -1,17 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
-from principal.views import inicio, ventas, usuarios, insumos, productos, servicios, proveedores, clientes, compras, login
+# , usuarios, insumos, productos, proveedores, clientes, compras, login
+from principal.views import inicio,login
 
 urlpatterns = [
-    path('admin/', admin.site.urls),    
+    path('admin/', admin.site.urls),
     path('', inicio, name='inicio'),
-    path('ventas/',ventas, name='ventas'),
-    path('usuarios/',usuarios, name='usuarios'),
-    path('insumos/',insumos, name='insumos'),
-    path('productos/',productos, name='productos'),
-    path('servicios/',servicios, name='servicios'),
-    path('proveedores/',proveedores, name='proveedores'),
-    path('clientes/',clientes, name='clientes'),
-    path('compras/',compras, name='compras'),
-    path('login/',login,name='login'),
+    path('ventas/', include('ventas.urls')),
+    path('usuarios/',include('usuarios.urls')),
+    path('compras/',include('compras.urls')),
+    path('login/', login, name='login'),
 ]
