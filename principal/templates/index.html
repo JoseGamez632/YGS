@@ -127,7 +127,7 @@
                   <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
                       <h1 style="font-size: 3vw;">Insumos</h1>
-                      <a class="btn btn-outline-light btn-lg" href="insumos.html" role="button" class="respons" style="font-size: 1.5vw;"
+                      <a class="btn btn-outline-light btn-lg" href="{% url 'insumos' %}" role="button" class="respons" style="font-size: 1.5vw;"
                         >INGRESAR</a>
                     </div>
                   </div>
@@ -184,8 +184,4 @@
 <!-- Finaliza el main -->
 {% endblock contenido %}
 
-
-{% block titulo %}
-    {{apellidos}}
-{% endblock titulo %}
 
