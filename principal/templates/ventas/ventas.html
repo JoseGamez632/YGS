@@ -2,357 +2,359 @@
 {% load static %}
 
 {% block contenido %}
-    <!-- Botón agegar nueva venta.  -->
-    <section class="proveedores y filt">
-      <!-- Contenido de off canvas  -->
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
-        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-  
-        <div class="offcanvas-body">
-  
-          <div class="offcanvas-header">
-            <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-boxes-packing"
-                style="color: #ffffff;"></i> Datos venta</h3>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- Botón agegar nueva venta.  -->
+<section class="ventasYfilt">
+  <!-- Contenido de off canvas  -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+    style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+
+    <div class="offcanvas-body">
+
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-boxes-packing"
+            style="color: #ffffff;"></i> Datos venta</h3>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="mb-3" size="20">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
           </div>
-          <div class="mb-3" size="20">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique el ID de la venta.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique la fecha de la venta.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">Fecha venta</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique el nombre del cliente.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre cliente</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique el subtotal de la venta.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">Subtotal</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique el IVA de la venta.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">IVA</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-              <div class="valid-feedback">
-                ¡Dato Valido!
-              </div>
-              <div class="invalid-feedback">
-                Dato inválido, por favor, indique el precio total de la venta.
-              </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">Total venta</label>
-            </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique el ID de la venta.
           </div>
-          <center>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit">Enviar formulario</button>
-            </div>
-          </center>
+          <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
         </div>
-  
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
+          </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique la fecha de la venta.
+          </div>
+          <label for="floatingInput" for="validationCustom01" class="form-label">Fecha venta</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
+          </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique el nombre del cliente.
+          </div>
+          <label for="floatingInput" for="validationCustom01" class="form-label">Nombre cliente</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
+          </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique el subtotal de la venta.
+          </div>
+          <label for="floatingInput" for="validationCustom01" class="form-label">Subtotal</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
+          </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique el IVA de la venta.
+          </div>
+          <label for="floatingInput" for="validationCustom01" class="form-label">IVA</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          <div class="valid-feedback">
+            ¡Dato Valido!
+          </div>
+          <div class="invalid-feedback">
+            Dato inválido, por favor, indique el precio total de la venta.
+          </div>
+          <label for="floatingInput" for="validationCustom01" class="form-label">Total venta</label>
+        </div>
       </div>
-      <!-- Contenido de off canvas, end.  -->
-      </div>
-    </section>
-    <!-- Tabla.  -->
-    <section class="tablaProveedores" <div class="containes">
-      <div class="row">
-        <div class="col">
-          <div class="table-responsive">
-            <button class="floating-button" class="btn btn-warning btn-rounded" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-file-circle-plus" style="color: #ffffff;"></i> Agregar nueva venta
+      <center>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar formulario</button>
+        </div>
+      </center>
+    </div>
+
+  </div>
+  <!-- Contenido de off canvas, end.  -->
+  </div>
+</section>
+<!-- Tabla.  -->
+<section class="tablaVentas">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <button class="floating-button" class="btn btn-warning btn-rounded" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-file-circle-plus"
+              style="color: #ffffff;"></i> Agregar nueva venta
           </button>
-            <table id="table_id" class="display">
-              <font></font>
-              <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
-                <font></font>
-                <tr>
-                  <font></font>
-                  <th>ID venta</th>
-                  <font></font>
-                  <th>Fecha de venta</th>
-                  <font></font>
-                  <th>Nombre del cliente</th>
-                  <font></font>
-                  <th>Subtotal</th>
-                  <font></font>
-                  <th>IVA</th>
-                  <font></font>
-                  <th>Detalle<br>venta</th>
-                  <font></font>
-                  <th>Precio total</th>
-                  <font></font>
-                  <th>Editar</th>
-                  <font></font>
-                  <th>Estado<br>actual</th>
-                  <font></font>
-                </tr>
-                <font></font>
-              </thead>
-              <font></font>
-              <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
-                <font></font>
-                <tr>
-                  <font></font>
-                  <td>0001</td>
-                  <font></font>
-                  <td>12/31/2023</td>
-                  <font></font>
-                  <td>Made Centro</td>
-                  <font></font>
-                  <td>1.000.000</td>
-                  <font></font>
-                  <td>190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                      data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                    </button>
-                  </td>
-                  <font></font>
-                  <td>1.190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                      data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                        style="color: green;"></i></button>
-                  <td>
-                    <!-- Checked switch -->
-                    <div class="form-check form-check-inline form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                    </div>
-                  </td>
-                  <font></font>
-                </tr>
-                <font></font>
-                <tr>
-                  <font></font>
-                  <td>0001</td>
-                  <font></font>
-                  <td>12/31/2023</td>
-                  <font></font>
-                  <td>Made Centro</td>
-                  <font></font>
-                  <td>1.000.000</td>
-                  <font></font>
-                  <td>190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                      data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                    </button>
-                  </td>
-                  <font></font>
-                  <td>1.190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                      data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                        style="color: green;"></i></button>
-                  <td>
-                    <!-- Checked switch -->
-                    <div class="form-check form-check-inline form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                    </div>
-                  </td>
-                  <font></font>
-                </tr>
-                <font></font>
-                <tr>
-                  <font></font>
-                  <td>0001</td>
-                  <font></font>
-                  <td>12/31/2023</td>
-                  <font></font>
-                  <td>Made Centro</td>
-                  <font></font>
-                  <td>1.000.000</td>
-                  <font></font>
-                  <td>190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                      data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                    </button>
-                  </td>
-                  <font></font>
-                  <td>1.190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                      data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                        style="color: green;"></i></button>
-                  <td>
-                    <!-- Checked switch -->
-                    <div class="form-check form-check-inline form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                    </div>
-                  </td>
-                  <font></font>
-                </tr>
-                <font></font>
-                <tr>
-                  <font></font>
-                  <td>0001</td>
-                  <font></font>
-                  <td>12/31/2023</td>
-                  <font></font>
-                  <td>Made Centro</td>
-                  <font></font>
-                  <td>1.000.000</td>
-                  <font></font>
-                  <td>190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                      data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                    </button>
-                  </td>
-                  <font></font>
-                  <td>1.190.000</td>
-                  <font></font>
-                  <td>
-                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                      data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                        style="color: green;"></i></button>
-                  <td>
-                    <!-- Checked switch -->
-                    <div class="form-check form-check-inline form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                    </div>
-                  </td>
-                  <font></font>
-                </tr>
-                <font></font>
-  
-              </tbody>
-              <font></font>
-            </table>
+          <table id="table_id" class="display">
             <font></font>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    <!-- Botón Agregar detalles de venta.  -->
-    <div class="modal fade modal fade-sm" id="edit_detall_venta" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
-                class="fa-solid fa-boxes-packing" style="color: #de8b13;"></i> Modificar información de venta</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body"
-            style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-            <div class="mb-3" size="20">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique el ID de la venta.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique la fecha de la venta.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Fecha venta</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique el nombre del cliente.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre cliente</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique el subtotal de la venta.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Subtotal</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique el IVA de la venta.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">IVA</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Dato inválido, por favor, indique el precio total de la venta.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Total venta</label>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary"
-              style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
-          </div>
+            <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
+              <font></font>
+              <tr>
+                <font></font>
+                <th>ID venta</th>
+                <font></font>
+                <th>Fecha de venta</th>
+                <font></font>
+                <th>Nombre del cliente</th>
+                <font></font>
+                <th>Subtotal</th>
+                <font></font>
+                <th>IVA</th>
+                <font></font>
+                <th>Detalle<br>venta</th>
+                <font></font>
+                <th>Precio total</th>
+                <font></font>
+                <th>Editar</th>
+                <font></font>
+                <th>Estado<br>actual</th>
+                <font></font>
+              </tr>
+              <font></font>
+            </thead>
+            <font></font>
+            <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
+              <font></font>
+              <tr>
+                <font></font>
+                <td>0001</td>
+                <font></font>
+                <td>12/31/2023</td>
+                <font></font>
+                <td>Made Centro</td>
+                <font></font>
+                <td>1.000.000</td>
+                <font></font>
+                <td>190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="detalle venta"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                  </button>
+                </td>
+                <font></font>
+                <td>1.190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Editar"><i class="fa-solid fa-pen-to-square"
+                      style="color: green;"></i></button>
+                <td>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                </td>
+                <font></font>
+              </tr>
+              <font></font>
+              <tr>
+                <font></font>
+                <td>0002</td>
+                <font></font>
+                <td>12/31/2022</td>
+                <font></font>
+                <td>Made norte</td>
+                <font></font>
+                <td>800.000</td>
+                <font></font>
+                <td>290.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                  </button>
+                </td>
+                <font></font>
+                <td>1.190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
+                      style="color: green;"></i></button>
+                <td>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                </td>
+                <font></font>
+              </tr>
+              <font></font>
+              <tr>
+                <font></font>
+                <td>0001</td>
+                <font></font>
+                <td>12/31/2023</td>
+                <font></font>
+                <td>Made Centro</td>
+                <font></font>
+                <td>1.000.000</td>
+                <font></font>
+                <td>190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                  </button>
+                </td>
+                <font></font>
+                <td>1.190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
+                      style="color: green;"></i></button>
+                <td>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                </td>
+                <font></font>
+              </tr>
+              <font></font>
+              <tr>
+                <font></font>
+                <td>0001</td>
+                <font></font>
+                <td>12/31/2023</td>
+                <font></font>
+                <td>Made Centro</td>
+                <font></font>
+                <td>1.000.000</td>
+                <font></font>
+                <td>190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                  </button>
+                </td>
+                <font></font>
+                <td>1.190.000</td>
+                <font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
+                      style="color: green;"></i></button>
+                <td>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                </td>
+                <font></font>
+              </tr>
+              <font></font>
+
+            </tbody>
+            <font></font>
+          </table>
+          <font></font>
         </div>
       </div>
     </div>
+  </div>
+</section>
+<!-- Botón Agregar detalles de venta.  -->
+<div class="modal fade modal fade-sm" id="edit_detall_venta" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+            class="fa-solid fa-boxes-packing" style="color: #de8b13;"></i> Modificar información de venta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"
+        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+        <div class="mb-3" size="20">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique el ID de la venta.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique la fecha de la venta.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">Fecha venta</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique el nombre del cliente.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre cliente</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique el subtotal de la venta.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">Subtotal</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique el IVA de la venta.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">IVA</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="valid-feedback">
+              ¡Dato Valido!
+            </div>
+            <div class="invalid-feedback">
+              Dato inválido, por favor, indique el precio total de la venta.
+            </div>
+            <label for="floatingInput" for="validationCustom01" class="form-label">Total venta</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary"
+          style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock contenido %}
