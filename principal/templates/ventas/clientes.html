@@ -3,7 +3,7 @@
 
 {% block contenido %}
 <!-- Botón agegar nuevo Cliente.  -->
-<section class="proveedores y filt">
+<section class="clientes y filt">
     <!-- Contenido de off canvas  -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
@@ -23,7 +23,7 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el proveedor.
+                        Por favor, elije un teléfono para el cliente.
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Cliente</label>
                 </div>
@@ -35,7 +35,7 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el proveedor.
+                        Por favor, elije un teléfono para el cliente.
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Apellido Cliente</label>
                 </div>
@@ -56,7 +56,7 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el proveedor.
+                        Por favor, elije un teléfono para el cliente.
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Numero Documento</label>
                 </div>
@@ -68,7 +68,7 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el proveedor.
+                        Por favor, elije un teléfono para el cliente.
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Numero Celuar</label>
                 </div>
@@ -80,7 +80,7 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el proveedor.
+                        Por favor, elije un teléfono para el cliente.
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Correo Electronico</label>
                 </div>
@@ -94,7 +94,7 @@
         </div>
         <!-- Contenido de off canvas, end.  -->
     </div>
-    <section class="tablaProveedores" <div class="containes">
+    <section class="tablaclientes"> <div class="containes">
         <div class="row">
             <div class="col">
                 <div class="table-responsive">
@@ -375,18 +375,19 @@
         </div>
     </section>
     <!-- Botón Editar Cliente. revisar -->
-    <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="edit_emergente_clientes" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
-                            class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Proveedores</h5>
+                            class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación clientes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body"
                     style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
                     <div class="mb-3" size="20">
+                        {% comment %} nombre cliente {% endcomment %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
@@ -394,11 +395,12 @@
                                 ¡Dato Valido!
                             </div>
                             <div class="invalid-feedback">
-                                Por favor, elije un nombre para el proveedor.
+                                Por favor, indica el nombre para el cliente.
                             </div>
                             <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
-                                Proveedor</label>
+                                cliente</label>
                         </div>
+                        {% comment %} apellido cliente {% endcomment %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
@@ -406,10 +408,11 @@
                                 ¡Dato Valido!
                             </div>
                             <div class="invalid-feedback">
-                                Por favor, elije un NIT para el proveedor.
+                                Por favor, indica el apellido para el cliente.
                             </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Apellido</label>
                         </div>
+                        {% comment %} telefono cliente {% endcomment %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
@@ -417,18 +420,11 @@
                                 ¡Dato Valido!
                             </div>
                             <div class="invalid-feedback">
-                                Por favor, elije un teléfono para el proveedor.
+                                Por favor, elije un teléfono para el cliente.
                             </div>
                             <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
                         </div>
-                        <div class="mb-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Selecciona un método de pago</option>
-                                <option value="1">Transferencia</option>
-                                <option value="2">Efectivo</option>
-                                <option value="3">Tarjeta</option>
-                            </select>
-                        </div>
+                        {% comment %} dirección cliente {% endcomment %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
@@ -436,19 +432,21 @@
                                 ¡Dato Valido!
                             </div>
                             <div class="invalid-feedback">
-                                Por favor, elije un teléfono para el proveedor.
+                                Por favor, elije una dirección para el cliente.
                             </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
-                                Encargado</label>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Dirección</label>
                         </div>
+                        {% comment %} tipo de documento cliente {% endcomment %}
                         <div class="mb-3">
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Tipo documento encargado</option>
-                                <option value="1">Cédula</option>
-                                <option value="2">Pasaporte</option>
-                                <option value="3">PEP</option>
+                                <option selected>Tipo Documento</option>
+                                <option value="1">C.c</option>
+                                <option value="2">T.I</option>
+                                <option value="3">C.E</option>
+                                <option value="4">P.E.P</option>
                             </select>
                         </div>
+                        {% comment %} numero documento cliente {% endcomment %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
@@ -456,10 +454,22 @@
                                 ¡Dato Valido!
                             </div>
                             <div class="invalid-feedback">
-                                Por favor, elije un numero de documento para el proveedor.
+                                Por favor, elije un numero de documento para el cliente.
                             </div>
                             <label for="floatingInput" for="validationCustom01" class="form-label">Numero
                                 Documento</label>
+                        </div>
+                        {% comment %} email cliente {% endcomment %}
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, indica un email para el cliente.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">email</label>
                         </div>
                     </div>
                 </div>
