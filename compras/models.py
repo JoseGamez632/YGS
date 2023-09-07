@@ -23,7 +23,7 @@ class proveedor(models.Model): #Falta proveedor_id autoinclementable
         NIT = 4, _('NIT')
         OT = 5, _('OTRO')
     prov_tipo_documento = models.IntegerField(default=TipoDoc.CC, choices=TipoDoc.choices, verbose_name="Tipo documento")
-    prov_num_documento = models.CharField(max_length=25, verbose_name="Numero de documento")
+    prov_num_documento = models.CharField(max_length=25, verbose_name="Número de documento")
     class Estado(models.TextChoices):
         ACTIVO='1', _('Activo')
         INACTIVO='0', _('Inactivo')

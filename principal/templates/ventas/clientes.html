@@ -3,7 +3,7 @@
 
 {% block contenido %}
 <!-- Botón agegar nuevo Cliente.  -->
-<section class="clientes y filt">
+<section class="clientesYfilt">
     <!-- Contenido de off canvas  -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
@@ -94,7 +94,10 @@
         </div>
         <!-- Contenido de off canvas, end.  -->
     </div>
-    <section class="tablaclientes"> <div class="containes">
+</section>
+<!-- Tabla.  -->
+<section class="tablaclientes">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="table-responsive">
@@ -134,7 +137,7 @@
                             <font></font>
                             <tr>
                                 <font></font>
-                                <td>Damian</td>
+                                <td>Edwin</td>
                                 <font></font>
                                 <td>Orduz</td>
                                 <font></font>
@@ -148,7 +151,7 @@
                                 <font></font>
                                 <td>
                                     <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
+                                        data-bs-target="#edit_emergente_clientes"><i class="fa-solid fa-pen-to-square"
                                             style="color: green;"></i></button>
                                 <td>
                                     <!-- Checked switch -->
@@ -372,113 +375,113 @@
                 </div>
             </div>
         </div>
-        </div>
-    </section>
-    <!-- Botón Editar Cliente. revisar -->
-    <div class="modal fade" id="edit_emergente_clientes" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
-                            class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación clientes</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body"
-                    style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-                    <div class="mb-3" size="20">
-                        {% comment %} nombre cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, indica el nombre para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
-                                cliente</label>
+    </div>
+</section>
+<!-- Botón Editar Cliente. revisar -->
+<div class="modal fade" id="edit_emergente_clientes" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                        class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación clientes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"
+                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                <div class="mb-3" size="20">
+                    {% comment %} nombre cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
                         </div>
-                        {% comment %} apellido cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, indica el apellido para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Apellido</label>
+                        <div class="invalid-feedback">
+                            Por favor, indica el nombre para el cliente.
                         </div>
-                        {% comment %} telefono cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, elije un teléfono para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
+                            cliente</label>
+                    </div>
+                    {% comment %} apellido cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
                         </div>
-                        {% comment %} dirección cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, elije una dirección para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Dirección</label>
+                        <div class="invalid-feedback">
+                            Por favor, indica el apellido para el cliente.
                         </div>
-                        {% comment %} tipo de documento cliente {% endcomment %}
-                        <div class="mb-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tipo Documento</option>
-                                <option value="1">C.c</option>
-                                <option value="2">T.I</option>
-                                <option value="3">C.E</option>
-                                <option value="4">P.E.P</option>
-                            </select>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Apellido</label>
+                    </div>
+                    {% comment %} telefono cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
                         </div>
-                        {% comment %} numero documento cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, elije un numero de documento para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">Numero
-                                Documento</label>
+                        <div class="invalid-feedback">
+                            Por favor, elije un teléfono para el cliente.
                         </div>
-                        {% comment %} email cliente {% endcomment %}
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <div class="valid-feedback">
-                                ¡Dato Valido!
-                            </div>
-                            <div class="invalid-feedback">
-                                Por favor, indica un email para el cliente.
-                            </div>
-                            <label for="floatingInput" for="validationCustom01" class="form-label">email</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+                    </div>
+                    {% comment %} dirección cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
                         </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije una dirección para el cliente.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Dirección</label>
+                    </div>
+                    {% comment %} tipo de documento cliente {% endcomment %}
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Tipo Documento</option>
+                            <option value="1">C.c</option>
+                            <option value="2">T.I</option>
+                            <option value="3">C.E</option>
+                            <option value="4">P.E.P</option>
+                        </select>
+                    </div>
+                    {% comment %} numero documento cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un número de documento para el cliente.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Numero
+                            Documento</label>
+                    </div>
+                    {% comment %} email cliente {% endcomment %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, indica un email para el cliente.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">email</label>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary"
-                        style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary"
+                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
             </div>
         </div>
     </div>
-    {% endblock contenido %}
+</div>
+{% endblock contenido %}
