@@ -2,232 +2,564 @@
 {% load static %}
 
 {% block contenido %}
-<div class="container">
-    <!-- Botón agegar nuevo usuario.  -->
-    <section class="proveedores y filt" >
-        <!-- Contenido de off canvas  -->
-        <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
+<!-- Botón agegar nuevo usuario.  -->
+<section class="add_nuevo">
+
+
+    <!-- Contenido de off canvas  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-          
-          <div class="offcanvas-body">
+
+
+
+        <div class="offcanvas-body">
+
             <div class="offcanvas-header">
-              <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus" style="color: white;"></i> Nuevo usuario</h3>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus"
+                        style="color: white;"></i> Datos usuario</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
             <div class="mb-3" size="20">
+              {% comment %} NOMBRE USUARIO {% endcomment %}
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un nombre para el usuario.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre usuario</label>
+                </div>
+              {% comment %} APELLIDO USUARIO {% endcomment %}
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, elije un apellido para el usuario.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Apellido usuario</label>
+                </div>
+              {% comment %} TIPO DOCUMENTO USUARIO {% endcomment %}
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipo documento usuario</option>
+                    <option value="1">Cédula</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">PEP</option>
+                </select>
+            </div>
+              {% comment %} NÚMERO DOCUMENTO USUARIO {% endcomment %}
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <div class="valid-feedback">
-                  ¡Dato Valido!
+                    ¡Dato Valido!
                 </div>
                 <div class="invalid-feedback">
-                  Por favor, elije un nombre para el proveedor.
+                    Por favor, elije un número de documento para el usuario.
                 </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre y apellido</label>
-              </div>
+                <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
+            </div>
+              {% comment %} NÚMERO TELEFONO USUARIO {% endcomment %}
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <div class="valid-feedback">
-                  ¡Dato Valido!
+                    ¡Dato Valido!
                 </div>
                 <div class="invalid-feedback">
-                  Por favor, elije un NIT para el proveedor.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Numero de documento</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor, elije un teléfono para el proveedor.
+                    Por favor, elije un teléfono para el usuario.
                 </div>
                 <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
               </div>
-              <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Cargo</option>
-                  <option value="1">Vendedor</option>
-                  <option value="2">Administrador</option>
-                  <option value="3">Almacenista</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Permisos usuario</option>
-                  <option value="1">Administrador</option>
-                  <option value="2">Solo ingreso de información</option>
-                  <option value="3">Solo visualizar información</option>
-                </select>
-              </div>
             </div>
+            {% comment %} DIRECCIÓN USUARIO {% endcomment %}
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                  ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                  Por favor, elije una dirección para el usuario.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Dirección usuario</label>
+          </div>
+            {% comment %} EMAIL USUARIO {% endcomment %}
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                  ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                  Por favor, elije un email para el usuario.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Email usuario</label>
+          </div>
+            {% comment %} CLAVE USUARIO {% endcomment %}
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                  ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                  Por favor, elije una clave para el usuario.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Clave usuario</label>
+          </div>
             <center>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Crear usuario</button>
-              </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
             </center>
-          </div>
-          
         </div>
-        <!-- Contenido de off canvas, end.  -->
-        </div>
-      </section>
-      <!-- Perfiles Usuarios.  -->
-      <section>
-        <div>     
-          <button class="floating-button" class="btn btn-warning btn-rounded"
-          type="button" data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar nuevo usuario
-          </button>
-        </div>
-        <center>
-          <div class="mb-3" size="20" style="opacity: 90%;" > <br>
-            <div class="container"> 
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Jose Gamez</h5>
-                      <p class="card-text">
-                        Cargo: Dueño Administrador.<br>
-                        Administrador.<br>
-                        Usuario activo.<br>
-                      </p>
-                      <center>
-                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
-                      </center>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Augusto Ortiz</h5>
-                      <p class="card-text">
-                        Cargo: Dueño Administrador.<br>
-                        Administrador.<br>
-                        Usuario desactivado.<br>
-                      </p>
-                      <center>
-                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
-                      </center>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Augusto Ortiz</h5>
-                      <p class="card-text">
-                        Cargo: Dueño Administrador.<br>
-                        Administrador.<br>
-                        Usuario desactivado.<br>
-                      </p>
-                      <center>
-                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
-                      </center>
-                    </div>
-                  </div>
-                </div>              <div class="col-sm-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Augusto Ortiz</h5>
-                      <p class="card-text">
-                        Cargo: Dueño Administrador.<br>
-                        Administrador.<br>
-                        Usuario desactivado.<br>
-                      </p>
-                      <center>
-                        <button type="button" class="btn btn-outline-warning" data-bs-target="#edit_emergente_proveedores" data-bs-toggle="modal" > Editar o eliminar</button>
-                      </center>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+
+    </div>
+    <!-- Contenido de off canvas, end.  -->
+    </div>
+</section>
+<!-- Tabla.  -->
+<section class="tablaProveedores" <div class="containes">
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
+                        class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar usuario
+                </button>
+                <table id="table_id" class="display">
+                    <font></font>
+                    <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <th>Nombre usuario</th>
+                            <font></font>
+                            <th>Apellido usuario</th>
+                            <font></font>
+                            <th>Tipo Documento</th>
+                            <font></font>
+                            <th>Documento</th>
+                            <font></font>
+                            <th>Teléfono</th>
+                            <font></font>
+                            <th>Dirección</th>
+                            <font></font>
+                            <th>Email</th>
+                            <font></font>
+                            <th>Clave</th>
+                            <font></font>
+                            <th>Editar</th>
+                            <font></font>
+                            <th>Estado actual</th>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                    </thead>
+                    <font></font>
+                    <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                          <font></font>
+                          <td>Row Data 1</td>
+                          <font></font>
+                          <td>Row Data 2</td>
+                          <font></font>
+                          <td>Row Data 3</td>
+                          <font></font>
+                          <td>Row Data 4</td>
+                          <font></font>
+                          <td>Row Data 5</td>
+                          <font></font>
+                          <td>Row Data 6</td>
+                          <font></font>
+                          <td>Row Data 7</td>
+                          <font></font>
+                          <td>Row Data 8</td>
+                          <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                          <font></font>
+                          <td>Row Data 1</td>
+                          <font></font>
+                          <td>Row Data 2</td>
+                          <font></font>
+                          <td>Row Data 3</td>
+                          <font></font>
+                          <td>Row Data 4</td>
+                          <font></font>
+                          <td>Row Data 5</td>
+                          <font></font>
+                          <td>Row Data 6</td>
+                          <font></font>
+                          <td>Row Data 7</td>
+                          <font></font>
+                          <td>Row Data 8</td>
+                          <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+                        <tr>
+                            <font></font>
+                            <td>Row Data 1</td>
+                            <font></font>
+                            <td>Row Data 2</td>
+                            <font></font>
+                            <td>Row Data 3</td>
+                            <font></font>
+                            <td>Row Data 4</td>
+                            <font></font>
+                            <td>Row Data 5</td>
+                            <font></font>
+                            <td>Row Data 6</td>
+                            <font></font>
+                            <td>Row Data 7</td>
+                            <font></font>
+                            <td>Row Data 8</td>
+                            <font></font>
+                            <td>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
+                                        style="color: green;"></i></button>
+                            <td>
+                                <!-- Checked switch -->
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked />
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                                </div>
+                            </td>
+                            <font></font>
+                        </tr>
+                        <font></font>
+
+                    </tbody>
+                    <font></font>
+                </table>
+                <font></font>
             </div>
-          </div>
-        </center>
-      </section>
-    <!-- Botón Modificar proveedor.  -->
-    <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" >
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Botón Modificar proveedor.  -->
+<div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificar Usuario</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
-          </div >
-          <div class="modal-body" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-            <div class="mb-3" size="20">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor, elije un nombre para el proveedor.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Nombre y apellido</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor, elije un NIT para el proveedor.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Numero de identificación</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                  ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor, elije un teléfono para el proveedor.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
-              </div>
-              <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Cargo</option>
-                  <option value="1">Vendedor</option>
-                  <option value="2">Administrador</option>
-                  <option value="3">Almacenista</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Permisos usuario</option>
-                  <option value="1">Administrador</option>
-                  <option value="2">Solo ingreso de información</option>
-                  <option value="3">Solo visualizar información</option>
-                </select>
-              </div>
-              <center>
-                <h4 style="color: white;">
-                  Estado de usuario
-                </h4>
-              </center>
-              <div class="mb-3">
-                <center>
-                  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-danger">Inhabilitado</button>
-                    <button type="button" class="btn btn-warning">Eliminar</button>
-                    <button type="button" class="btn btn-success">Activado</button>
-                  </div>
-                </center>
-              </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                        class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Proveedores</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary" style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
-          </div>
+            <div class="modal-body"
+                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                <div class="mb-3" size="20">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un nombre para el proveedor.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Proveedor</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un NIT para el proveedor.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un teléfono para el proveedor.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecciona un método de pago</option>
+                            <option value="1">Transferencia</option>
+                            <option value="2">Efectivo</option>
+                            <option value="3">Tarjeta</option>
+                        </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un teléfono para el proveedor.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Encargado</label>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Tipo documento encargado</option>
+                            <option value="1">Cédula</option>
+                            <option value="2">Pasaporte</option>
+                            <option value="3">PEP</option>
+                        </select>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, elije un número de documento para el proveedor.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary"
+                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+            </div>
         </div>
-      </div>
     </div>
 </div>
 {% endblock contenido %}
