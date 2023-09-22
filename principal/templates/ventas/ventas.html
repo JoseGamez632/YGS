@@ -2,7 +2,17 @@
 {% load static %}
 
 {% block contenido %}
-<!-- Botón agegar nueva venta.  -->
+
+<!-- Boton agegar nueva venta.  -->
+<br>
+<button class="cssbuttons-io-button" id="boton_agregar" type="button" data-bs-toggle="offcanvas" 
+  data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-file-circle-plus"
+  style="color: #ffffff;"></i> Agregar nueva venta<div class="icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+  </div>
+</button>
+
+<!-- Contenido agegar nueva venta.  -->
 <section class="ventasYfilt">
   <!-- Contenido de off canvas  -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
@@ -16,16 +26,6 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="mb-3" size="20">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-          <div class="valid-feedback">
-            ¡Dato Valido!
-          </div>
-          <div class="invalid-feedback">
-            Dato inválido, por favor, indique el ID de la venta.
-          </div>
-          <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
-        </div>
         <div class="form-floating mb-3">
           <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
           <div class="valid-feedback">
@@ -94,10 +94,7 @@
     <div class="row">
       <div class="col">
         <div class="table-responsive">
-          <button class="floating-button" class="btn btn-warning btn-rounded" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-file-circle-plus"
-              style="color: #ffffff;"></i> Agregar nueva venta
-          </button>
+
           <table id="table_id" class="display">
             <font></font>
             <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
@@ -141,46 +138,12 @@
                 <td>190.000</td>
                 <font></font>
                 <td>
-                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="detalle venta"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                  </button>
-                </td>
-                <font></font>
-                <td>1.190.000</td>
-                <font></font>
-                <td>
-                  <button type="button" class="btn btn-outline-success" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="Editar"><i class="fa-solid fa-pen-to-square"
-                      style="color: green;"></i></button>
-                <td>
-                  <!-- Checked switch -->
-                  <div class="form-check form-check-inline form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                  </div>
-                </td>
-                <font></font>
-              </tr>
-              <font></font>
-              <tr>
-                <font></font>
-                <td>0002</td>
-                <font></font>
-                <td>12/31/2022</td>
-                <font></font>
-                <td>Made norte</td>
-                <font></font>
-                <td>800.000</td>
-                <font></font>
-                <td>290.000</td>
-                <font></font>
-                <td>
                   <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
                     data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
                   </button>
                 </td>
                 <font></font>
-                <td>1.190.000</td>
+                <td>1.190.999</td>
                 <font></font>
                 <td>
                   <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
@@ -196,75 +159,6 @@
                 <font></font>
               </tr>
               <font></font>
-              <tr>
-                <font></font>
-                <td>0001</td>
-                <font></font>
-                <td>12/31/2023</td>
-                <font></font>
-                <td>Made Centro</td>
-                <font></font>
-                <td>1.000.000</td>
-                <font></font>
-                <td>190.000</td>
-                <font></font>
-                <td>
-                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                    data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                  </button>
-                </td>
-                <font></font>
-                <td>1.190.000</td>
-                <font></font>
-                <td>
-                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                    data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                      style="color: green;"></i></button>
-                <td>
-                  <!-- Checked switch -->
-                  <div class="form-check form-check-inline form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                  </div>
-                </td>
-                <font></font>
-              </tr>
-              <font></font>
-              <tr>
-                <font></font>
-                <td>0001</td>
-                <font></font>
-                <td>12/31/2023</td>
-                <font></font>
-                <td>Made Centro</td>
-                <font></font>
-                <td>1.000.000</td>
-                <font></font>
-                <td>190.000</td>
-                <font></font>
-                <td>
-                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                    data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                  </button>
-                </td>
-                <font></font>
-                <td>1.190.000</td>
-                <font></font>
-                <td>
-                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                    data-bs-target="#edit_detall_venta"><i class="fa-solid fa-pen-to-square"
-                      style="color: green;"></i></button>
-                <td>
-                  <!-- Checked switch -->
-                  <div class="form-check form-check-inline form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                  </div>
-                </td>
-                <font></font>
-              </tr>
-              <font></font>
-
             </tbody>
             <font></font>
           </table>
@@ -274,7 +168,7 @@
     </div>
   </div>
 </section>
-<!-- Botón Agregar detalles de venta.  -->
+<!-- Botón Editar de venta.  -->
 <div class="modal fade modal fade-sm" id="edit_detall_venta" tabindex="-1" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog">
@@ -287,16 +181,6 @@
       <div class="modal-body"
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
         <div class="mb-3" size="20">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-            <div class="valid-feedback">
-              ¡Dato Valido!
-            </div>
-            <div class="invalid-feedback">
-              Dato inválido, por favor, indique el ID de la venta.
-            </div>
-            <label for="floatingInput" for="validationCustom01" class="form-label">ID venta</label>
-          </div>
           <div class="form-floating mb-3">
             <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" required>
             <div class="valid-feedback">
