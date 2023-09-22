@@ -2,13 +2,14 @@
 {% load static %}
 
 {% block contenido %}
+
     <section class="proveedores y filt" >
+        
         <!-- Contenido de off canvas  -->
         <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
 
         <div class="offcanvas-body">
-
             <div class="offcanvas-header">
             <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-boxes-packing" style="color: #ffffff;"></i> Datos Compra</h3>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -54,15 +55,19 @@
     </section>
     <!-- Tabla.  -->
     <section class="tablaProveedores" 
+    
     <div class="containes">
+        <button class="cssbuttons-io-button" type="button" data-bs-toggle="offcanvas" 
+        data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-boxes-packing" style="color: #ffffff;"></i> Agregar Compra
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+            </div>
+          </button>
         <div class="row">
         <div class="col">
             <div class="table-responsive">
             <!-- Botón Agregar nueva compra.  -->
-            <button class="floating-button" class="btn btn-warning btn-rounded"
-            type="button" data-bs-toggle="offcanvas" 
-            data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-boxes-packing" style="color: #ffffff;"></i>  Agregar Nueva Compra
-            </button>
+
             <!-- Botón Agregar nueva compra.  -->
             <table id="table_id" class="display"><font></font>
                 <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);"><font></font>
