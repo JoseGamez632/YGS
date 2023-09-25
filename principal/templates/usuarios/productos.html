@@ -27,9 +27,9 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Dato inválido Por favor, indique un nombre para el producto.
+                        Dato inválido, por favor, ingrese el ID del producto.
                     </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">ID producto</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
@@ -37,12 +37,12 @@
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
-                        Dato inválido, Por favor, ingrese el precio de venta del producto.
+                        Dato inválido Por favor, indique un nombre para el producto.
                     </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                     <div class="valid-feedback">
                         ¡Dato Valido!
                     </div>
@@ -52,24 +52,34 @@
                     <label for="floatingInput" for="validationCustom01" class="form-label">Costo del producto</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, Por favor, ingrese el precio de venta del producto.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <div class="valid-feedback">
+                        ¡Dato Valido!
+                    </div>
+                    <div class="invalid-feedback">
+                        Dato inválido, por favor, indique la cantidad mínima del producto que se recomienda en el inventario.
+                    </div>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Stock mínimo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                     <div class="valid-feedback">
                         ¡Dato Valido!
                     </div>
                     <div class="invalid-feedback">
                         Dato inválido, por favor, indique la cantidad disponible del producto en el inventario.
                     </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Cantidad disponible</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Dato inválido, por favor, ingrese el código del producto.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Código del producto</label>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Stock</label>
                 </div>
                 <div class="mb-3">
                     <select class="form-select" aria-label="Default select example">
@@ -78,16 +88,6 @@
                         <option value="2">Muebles</option>
                         <option value="3">Camas</option>
                     </select>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Dato inválido, por favor, ingrese el código de barras del producto.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Código de barras</label>
                 </div>
             </div>
             <center>
@@ -116,19 +116,19 @@
                         <font></font>
                         <tr>
                             <font></font>
-                            <th>Nombre del producto</th>
+                            <th>ID producto</th>
                             <font></font>
-                            <th>Precio de venta</th>
+                            <th>Nombre del producto</th>
                             <font></font>
                             <th>Costo del producto</th>
                             <font></font>
-                            <th>Cantidad</th>
+                            <th>Precio de venta</th>
                             <font></font>
-                            <th>Código del producto</th>
+                            <th>Stock mínimo</th>
+                            <font></font>
+                            <th>Stock</th>
                             <font></font>
                             <th>Categoría</th>
-                            <font></font>
-                            <th>Código de barras</th>
                             <font></font>
                             <th>Editar</th>
                             <font></font>
@@ -480,9 +480,10 @@
                             ¡Dato Valido!
                         </div>
                         <div class="invalid-feedback">
-                            Dato inválido, por favor, indique el nombre para el producto.
+                            Dato inválido, por favor, ingrese el ID del producto.
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">ID
+                            producto</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
@@ -491,12 +492,12 @@
                             ¡Dato Valido!
                         </div>
                         <div class="invalid-feedback">
-                            Dato inválido, Por favor, ingrese el precio de venta del producto.
+                            Dato inválido, por favor, indique el nombre para el producto.
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre producto</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com"
                             required>
                         <div class="valid-feedback">
                             ¡Dato Valido!
@@ -508,28 +509,37 @@
                             producto</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com"
                             required>
                         <div class="valid-feedback">
                             ¡Dato Valido!
                         </div>
                         <div class="invalid-feedback">
-                            Dato inválido, por favor, indique la cantidad disponible del producto en el inventario.
+                            Dato inválido, Por favor, ingrese el precio de venta del producto.
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Cantidad
-                            disponible</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Precio de venta</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com"
                             required>
                         <div class="valid-feedback">
                             ¡Dato Valido!
                         </div>
                         <div class="invalid-feedback">
-                            Dato inválido, por favor, ingrese el código del producto.
+                            Dato inválido, por favor, indique la cantidad mínima recomendada del producto en el inventario.
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Código del
-                            producto</label>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Stock mínimo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Dato Valido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Dato inválido, por favor, indique la cantidad del producto en el inventario.
+                        </div>
+                        <label for="floatingInput" for="validationCustom01" class="form-label">Stock</label>
                     </div>
                     <div class="mb-3">
                         <select class="form-select" aria-label="Default select example">
@@ -538,17 +548,6 @@
                             <option value="2">Muebles</option>
                             <option value="3">Camas</option>
                         </select>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Dato inválido, por favor, ingrese el código de barras del producto.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Código de barras</label>
                     </div>
                 </div>
             </div>
