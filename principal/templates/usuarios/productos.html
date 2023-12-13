@@ -2,9 +2,16 @@
 {% load static %}
 
 {% block contenido %}
+<br>
 <!-- Botón agegar nuevo producto.  -->
-<section class="Proveedores y filt">
+<button class="cssbuttons-io-button" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-box-open" style="color: #ffffff;"></i>+ Agregar Producto
+    <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+    </div>
+</button>
 
+<section class="Proveedores y filt">
 
     <!-- Contenido de off canvas  -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
@@ -61,35 +68,6 @@
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Cantidad disponible</label>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Dato inválido, por favor, ingrese el código del producto.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Código del producto</label>
-                </div>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione la categoría del producto</option>
-                        <option value="1">Tapicería</option>
-                        <option value="2">Muebles</option>
-                        <option value="3">Camas</option>
-                    </select>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Dato inválido, por favor, ingrese el código de barras del producto.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Código de barras</label>
-                </div>
-            </div>
             <center>
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Enviar formulario</button>
@@ -106,10 +84,6 @@
     <div class="row">
         <div class="col">
             <div class="table-responsive">
-                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
-                        class="fa-solid fa-box-archive" style="color: #ffffff;"></i> Agregar Producto
-                </button>
                 <table id="table_id" class="display">
                     <font></font>
                     <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
