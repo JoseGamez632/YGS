@@ -2,6 +2,17 @@
 {% load static %}
 
 {% block contenido %}
+
+<!-- Botón Agregar nuevo cliente.  -->
+<br>
+<button class="cssbuttons-io-button" id="boton_agregar" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvas" aria-controls="offcanvas"><i
+    class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Nuevo Cliente
+    <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+    </div>
+</button>
+
 <!-- Botón agegar nuevo Cliente.  -->
 <section class="clientesYfilt">
     <!-- Contenido de off canvas  -->
@@ -25,7 +36,7 @@
                     <div class="invalid-feedback">
                         Por favor, elije un teléfono para el cliente.
                     </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Cliente</label>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre</label>
                 </div>
             </div>
             <div class="mb-3" size="20">
@@ -37,7 +48,7 @@
                     <div class="invalid-feedback">
                         Por favor, elije un teléfono para el cliente.
                     </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Apellido Cliente</label>
+                    <label for="floatingInput" for="validationCustom01" class="form-label">Apellido </label>
                 </div>
             </div>
             <div class="mb-3">
@@ -101,21 +112,16 @@
         <div class="row">
             <div class="col">
                 <div class="table-responsive">
-                    <!-- Botón Agregar nuevo cliente.  -->
-                    <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
-                        data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
-                            class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Nuevo Cliente
-                    </button>
-                    <!-- Botón Agregar nuevo cliente.  -->
+
                     <table id="table_id" class="display">
                         <font></font>
                         <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
                             <font></font>
                             <tr>
                                 <font></font>
-                                <th>Nombre Cliente</th>
+                                <th>Nombre</th>
                                 <font></font>
-                                <th>Apellido Cliente</th>
+                                <th>Apellido</th>
                                 <font></font>
                                 <th>Tipo Documento</th>
                                 <font></font>
@@ -147,214 +153,11 @@
                                 <font></font>
                                 <td>3105482495</td>
                                 <font></font>
-                                <td>@gmail.com</td>
+                                <td>@gmail.8</td>
                                 <font></font>
                                 <td>
                                     <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
                                         data-bs-target="#edit_emergente_clientes"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
-                                            style="color: green;"></i></button>
-                                <td>
-                                    <!-- Checked switch -->
-                                    <div class="form-check form-check-inline form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                    </div>
-                                </td>
-                                <font></font>
-                            </tr>
-                            <font></font>
-                            <tr>
-                                <font></font>
-                                <td>Damian</td>
-                                <font></font>
-                                <td>Orduz</td>
-                                <font></font>
-                                <td>C.I</td>
-                                <font></font>
-                                <td>10245245256</td>
-                                <font></font>
-                                <td>3105482495</td>
-                                <font></font>
-                                <td>@gmail.com</td>
-                                <font></font>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square"
                                             style="color: green;"></i></button>
                                 <td>
                                     <!-- Checked switch -->
@@ -401,7 +204,7 @@
                             Por favor, indica el nombre para el cliente.
                         </div>
                         <label for="floatingInput" for="validationCustom01" class="form-label">Nombre
-                            cliente</label>
+                            </label>
                     </div>
                     {% comment %} apellido cliente {% endcomment %}
                     <div class="form-floating mb-3">
