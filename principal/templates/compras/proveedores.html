@@ -2,6 +2,12 @@
 {% load static %}
 
 {% block contenido %}
+<br>
+<button class="cssbuttons-io-button" id="boton_agregar" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-truck-field-un" style="color: #ffffff;"></i>+ Agregar Proveedor<div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+    </div>
+</button>
 <!-- Botón agegar nuevo proveedor.  -->
 <section class="add_nuevo">
 
@@ -9,11 +15,7 @@
     <!-- Contenido de off canvas  -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
         style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-
-
-
         <div class="offcanvas-body">
-
             <div class="offcanvas-header">
                 <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus"
                         style="color: white;"></i> Datos Proveedor</h3>
@@ -51,14 +53,6 @@
                     </div>
                     <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
                 </div>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecciona un método de pago</option>
-                        <option value="1">Transferencia</option>
-                        <option value="2">Efectivo</option>
-                        <option value="3">Tarjeta</option>
-                    </select>
-                </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                     <div class="valid-feedback">
@@ -90,7 +84,7 @@
             </div>
             <center>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                    <button class="btn btn-primary" type="submit">Crear Proveedor</button>
                 </div>
             </center>
         </div>
@@ -104,10 +98,6 @@
     <div class="row">
         <div class="col">
             <div class="table-responsive">
-                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
-                        class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Proveedor
-                </button>
                 <table id="table_id" class="display">
                     <font></font>
                     <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
@@ -119,8 +109,6 @@
                             <th>NIT</th>
                             <font></font>
                             <th>Teléfono</th>
-                            <font></font>
-                            <th>Método de pago</th>
                             <font></font>
                             <th>Encargado</th>
                             <font></font>
@@ -151,256 +139,6 @@
                             <td>Row Data 5</td>
                             <font></font>
                             <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
                             <font></font>
                             <td>
                                 <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
@@ -473,14 +211,6 @@
                             Por favor, elije un teléfono para el proveedor.
                         </div>
                         <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona un método de pago</option>
-                            <option value="1">Transferencia</option>
-                            <option value="2">Efectivo</option>
-                            <option value="3">Tarjeta</option>
-                        </select>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
