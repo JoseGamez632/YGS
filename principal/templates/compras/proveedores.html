@@ -143,7 +143,7 @@
     <div class="container">
         <table   id="example" class="table table-striped" style="width:100%">
             <thead style="background-color: #dda24e; opacity: 70%;">
-                <tr>
+                <tr class="align-middle">
                     <th style="text-align: center;color: #1f4a6d;">ID</th>
                     <th style="text-align: center;color: #1f4a6d">Nombre Empresa</th>
                     <th style="text-align: center;color: #1f4a6d">NIT</th>
@@ -164,7 +164,14 @@
                     <td>Juan Perez</td>
                     <td>Cedula</td>
                     <td>1022382293</td>
-                    <td>Activado</td>
+                    <td>
+                        <div class="form-check form-switch p-0">
+                            <div class="d-flex flex-column gap-1">
+                            <input class="form-check-input ms-0" type="checkbox" role="switch" id="switchCheckLabelBottom" style="align-self: center;" />
+                            <label class="form-check-label" for="switchCheckLabelBottom" style="text-align: center; color: #50ce69;">Activado</label>
+                            </div>
+                        </div>
+                    </td>
                     <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
                 </tr>
                 <tr>
