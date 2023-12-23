@@ -2,578 +2,451 @@
 {% load static %}
 
 {% block contenido %}
-<!-- Botón agegar nuevo usuario.  -->
-<section class="add_nuevo">
-
-
-    <!-- Contenido de off canvas  -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
-        style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-
-
-
-        <div class="offcanvas-body">
-
-            <div class="offcanvas-header">
-                <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus"
-                        style="color: white;"></i> Datos usuario</h3>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="mb-3" size="20">
-                {% comment %} NOMBRE USUARIO {% endcomment %}
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Por favor, elije un nombre para el usuario.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Nombre usuario</label>
-                </div>
-                {% comment %} APELLIDO USUARIO {% endcomment %}
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Por favor, elije un apellido para el usuario.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Apellido usuario</label>
-                </div>
-                {% comment %} TIPO DOCUMENTO USUARIO {% endcomment %}
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tipo documento usuario</option>
-                        <option value="1">Cédula</option>
-                        <option value="2">Pasaporte</option>
-                        <option value="3">PEP</option>
-                    </select>
-                </div>
-                {% comment %} NÚMERO DOCUMENTO USUARIO {% endcomment %}
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Por favor, elije un número de documento para el usuario.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
-                </div>
-                {% comment %} NÚMERO TELEFONO USUARIO {% endcomment %}
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <div class="valid-feedback">
-                        ¡Dato Valido!
-                    </div>
-                    <div class="invalid-feedback">
-                        Por favor, elije un teléfono para el usuario.
-                    </div>
-                    <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
-                </div>
-            </div>
-            {% comment %} DIRECCIÓN USUARIO {% endcomment %}
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                    ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                    Por favor, elije una dirección para el usuario.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Dirección usuario</label>
-            </div>
-            {% comment %} EMAIL USUARIO {% endcomment %}
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                    ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                    Por favor, elije un email para el usuario.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Email usuario</label>
-            </div>
-            {% comment %} CLAVE USUARIO {% endcomment %}
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <div class="valid-feedback">
-                    ¡Dato Valido!
-                </div>
-                <div class="invalid-feedback">
-                    Por favor, elije una clave para el usuario.
-                </div>
-                <label for="floatingInput" for="validationCustom01" class="form-label">Clave usuario</label>
-            </div>
-            <center>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
-                </div>
-            </center>
-        </div>
-
+  <br>
+  <button class="cssbuttons-io-button" id="boton_agregar" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-house-user" style="color: #ffffff;"></i>+ Agregar Usuario
+    <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
     </div>
-    <!-- Contenido de off canvas, end.  -->
-    </div>
-</section>
-<!-- Tabla.  -->
-<section class="tablaProveedores" <div class="containes">
-    <div class="row">
-        <div class="col">
-            <div class="table-responsive">
-                <button class="floating-button" class="btn btn-warning btn-rounded" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas"><i
-                        class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar usuario
-                </button>
-                <table id="table_id" class="display">
-                    <font></font>
-                    <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);">
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <th>Nombre usuario</th>
-                            <font></font>
-                            <th>Apellido usuario</th>
-                            <font></font>
-                            <th>Tipo Documento</th>
-                            <font></font>
-                            <th>Documento</th>
-                            <font></font>
-                            <th>Teléfono</th>
-                            <font></font>
-                            <th>Dirección</th>
-                            <font></font>
-                            <th>Email</th>
-                            <font></font>
-                            <th>Clave</th>
-                            <font></font>
-                            <th>Editar</th>
-                            <font></font>
-                            <th>Estado actual</th>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                    </thead>
-                    <font></font>
-                    <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;">
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
-                        <tr>
-                            <font></font>
-                            <td>Row Data 1</td>
-                            <font></font>
-                            <td>Row Data 2</td>
-                            <font></font>
-                            <td>Row Data 3</td>
-                            <font></font>
-                            <td>Row Data 4</td>
-                            <font></font>
-                            <td>Row Data 5</td>
-                            <font></font>
-                            <td>Row Data 6</td>
-                            <font></font>
-                            <td>Row Data 7</td>
-                            <font></font>
-                            <td>Row Data 8</td>
-                            <font></font>
-                            <td>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square"
-                                        style="color: green;"></i></button>
-                            <td>
-                                <!-- Checked switch -->
-                                <div class="form-check form-check-inline form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="flexSwitchCheckChecked" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                                </div>
-                            </td>
-                            <font></font>
-                        </tr>
-                        <font></font>
+  </button>
 
-                    </tbody>
-                    <font></font>
-                </table>
-                <font></font>
-            </div>
-        </div>
+  <script>
+    $(document).ready(function() {
+        var table = $('#example').DataTable( {
+            lengthChange: false,
+            buttons: {
+                buttons: [
+                    {
+                        extend: 'copy',
+                        text: '<i class="bi bi-clipboard-check-fill"></i>',
+                        titleAttr: 'Copiar',
+                        className: 'btn btn-info'
+                    },
+                    {
+                        extend: 'excel',
+                        text: '<i class="bi bi-file-earmark-excel"></i>',
+                        titleAttr: 'Descargar Excel',
+                        className: 'btn btn-success'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: '<i class="bi bi-file-earmark-pdf"></i>',
+                        titleAttr: 'Exportar como PDF',
+                        className: 'btn btn-danger'
+                    },
+                    {
+                        extend: 'print',
+                        text: '<i class="bi bi-printer"></i>',
+                        titleAttr: 'Imprimir documento',
+                        className: 'btn btn-light'
+                    },
+                    {
+                        extend: 'colvis',
+                        text: '<i class="bi bi-funnel"></i> Filtrar',
+                        titleAttr: 'Filtrar datos requeridos',
+                        className: 'btn btn-warning'
+                    },
+                ]
+            }
+        } );
+    
+        table.buttons().container()
+            .appendTo( '#example_wrapper .col-md-6:eq(0) ' );
+    } );
+</script>
+<body>
+    <br>
+    <div class="container">
+        <table   id="example" class="table table-striped" style="width:100%">
+            <thead style="background-color: #dda24e; opacity: 90%;">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Tipo Documento</th>
+                    <th>Numero Documento</th>
+                    <th>Telefono</th>
+                    <th>Dirección</th>
+                    <th>Correo Electronico</th>
+                    <th>Estado</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody style="opacity: 80%;" class="table table-striped table-hover table-dark">
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Mercedes</td>
+                    <td>Torres</td>
+                    <td>Cedula</td>
+                    <td>1022382236</td>
+                    <td>3172301130</td>
+                    <td>Calle 2b # 9 - 43</td>
+                    <td>mercedes123@gmail.com</td>
+                    <td>Activo</td>
+                    <td>Boton Editar</td>
+                </tr>
+                
+            </tbody>
+        </table>
     </div>
-    </div>
-</section>
-
-<!-- Botón Modificar proveedor.  -->
-<div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
-                        class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación usuarios</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body"
-                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-                <div class="mb-3" size="20">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un nombre para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre usuario</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un apellido para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">apellido</label>
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tipo documento usuario</option>
-                            <option value="1">Cédula</option>
-                            <option value="2">Pasaporte</option>
-                            <option value="3">PEP</option>
-                        </select>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un número de documento para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un teléfono para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije una dirección.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Dirección</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un email para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije una clave para el usuario.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">clave</label>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary"
-                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
-            </div>
-        </div>
-    </div>
-</div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js" type="text/Javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/Javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/Javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js" type="text/Javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js" type="text/Javascript"></script>
+</body>
 {% endblock contenido %}
