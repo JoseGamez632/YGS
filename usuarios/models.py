@@ -33,7 +33,7 @@ class Servicio(models.Model):
         ACTIVO='1', _('Activo')
         INACTIVO='0', _('Inactivo')
     serv_estado = models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
-    Usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Id Usuario")
+    Usuario_usu_id = models.ForeignKey(Usuario, verbose_name="Id Usuario", on_delete=models.CASCADE)
     
 class Producto(models.Model):
     producto_id = models.AutoField(primary_key=True)
