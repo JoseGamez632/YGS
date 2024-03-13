@@ -92,475 +92,203 @@
     </div>
     <!-- Contenido de off canvas, end.  -->
     </div>
-</section>
-<!-- Tabla.  -->
-<script>
-    $(document).ready(function() {
-        var table = $('#example').DataTable( {
-            lengthChange: false,
-            buttons: {
-                buttons: [
-                    {
-                        extend: 'copy',
-                        text: '<i class="bi bi-clipboard-check-fill"></i>',
-                        titleAttr: 'Copiar',
-                        className: 'btn btn-info'
-                    },
-                    {
-                        extend: 'excel',
-                        text: '<i class="bi bi-file-earmark-excel"></i>',
-                        titleAttr: 'Descargar Excel',
-                        className: 'btn btn-success'
-                    },
-                    {
-                        extend: 'pdf',
-                        text: '<i class="bi bi-file-earmark-pdf"></i>',
-                        titleAttr: 'Exportar como PDF',
-                        className: 'btn btn-danger'
-                    },
-                    {
-                        extend: 'print',
-                        text: '<i class="bi bi-printer"></i>',
-                        titleAttr: 'Imprimir documento',
-                        className: 'btn btn-light'
-                    },
-                    {
-                        extend: 'colvis',
-                        text: '<i class="bi bi-funnel"></i> Filtrar',
-                        titleAttr: 'Filtrar datos requeridos',
-                        className: 'btn btn-warning'
-                    },
-                ]
-            }
-        } );
-    
-        table.buttons().container()
-            .appendTo( '#example_wrapper .col-md-6:eq(0) ' );
-    } );
-</script>
-<body>
-    <br>
-    <div class="container">
-        <table   id="example" class="table table-striped" style="width:100%">
-            <thead style="background-color: #dda24e; opacity: 70%;">
-                <tr class="align-middle">
-                    <th style="text-align: center;color: #1f4a6d;">ID</th>
-                    <th style="text-align: center;color: #1f4a6d">Nombre Empresa</th>
-                    <th style="text-align: center;color: #1f4a6d">NIT</th>
-                    <th style="text-align: center;color: #1f4a6d">Telefono</th>
-                    <th style="text-align: center;color: #1f4a6d">Encargado</th>
-                    <th style="text-align: center;color: #1f4a6d">Tipo de Documento</th>
-                    <th style="text-align: center;color: #1f4a6d">Numero Documento</th>
-                    <th style="text-align: center;color: #1f4a6d">Estado</th>
-                    <th style="text-align: center;color: #1f4a6d">Editar</th>
-                </tr>
-            </thead>
-            <tbody style="opacity: 80%;" class="table table-striped table-hover table-dark">
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>
-                        <div class="form-check form-switch p-0">
-                            <div class="d-flex flex-column gap-1">
-                            <input class="form-check-input ms-0" type="checkbox" role="switch" id="switchCheckLabelBottom" style="align-self: center;" />
-                            <label class="form-check-label" for="switchCheckLabelBottom" style="text-align: center; color: #50ce69;">Activado</label>
+    <!-- Botón Modificar proveedor.  -->
+    <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
+                            class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Proveedores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"
+                    style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+                    <div class="mb-3" size="20">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
                             </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un nombre para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Proveedor</label>
                         </div>
-                    </td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>Eco Mundo</td>
-                    <td>298139871298</td>
-                    <td>318806034</td>
-                    <td>Juan Perez</td>
-                    <td>Cedula</td>
-                    <td>1022382293</td>
-                    <td>Activado</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-outline-success"><i class="fa-regular fa-pen-to-square" style="color: #50ce69;"></i></button></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js" type="text/Javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/Javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/Javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js" type="text/Javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js" type="text/Javascript"></script>
-</body>
-
-<!-- Botón Modificar proveedor.  -->
-<div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i
-                        class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Proveedores</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body"
-                style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
-                <div class="mb-3" size="20">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un NIT para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
                         </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un nombre para el proveedor.
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un teléfono para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Proveedor</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un teléfono para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Encargado</label>
                         </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un NIT para el proveedor.
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Tipo documento encargado</option>
+                                <option value="1">Cédula</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">PEP</option>
+                            </select>
                         </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <div class="valid-feedback">
+                                ¡Dato Valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, elije un número de documento para el proveedor.
+                            </div>
+                            <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
                         </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un teléfono para el proveedor.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un teléfono para el proveedor.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Encargado</label>
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tipo documento encargado</option>
-                            <option value="1">Cédula</option>
-                            <option value="2">Pasaporte</option>
-                            <option value="3">PEP</option>
-                        </select>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <div class="valid-feedback">
-                            ¡Dato Valido!
-                        </div>
-                        <div class="invalid-feedback">
-                            Por favor, elije un número de documento para el proveedor.
-                        </div>
-                        <label for="floatingInput" for="validationCustom01" class="form-label">Número Documento</label>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary"
-                    style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button"  class="btn btn-primary"
+                        style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Tabla.  -->
+    <script>
+        $(document).ready(function() {
+            var table = $('#example').DataTable( {
+                lengthChange: false,
+                buttons: {
+                    buttons: [
+                        {
+                            extend: 'copy',
+                            text: '<i class="bi bi-clipboard-check-fill"></i>',
+                            titleAttr: 'Copiar',
+                            className: 'btn btn-info'
+                        },
+                        {
+                            extend: 'excel',
+                            text: '<i class="bi bi-file-earmark-excel"></i>',
+                            titleAttr: 'Descargar Excel',
+                            className: 'btn btn-success'
+                        },
+                        {
+                            extend: 'pdf',
+                            text: '<i class="bi bi-file-earmark-pdf"></i>',
+                            titleAttr: 'Exportar como PDF',
+                            className: 'btn btn-danger'
+                        },
+                        {
+                            extend: 'print',
+                            text: '<i class="bi bi-printer"></i>',
+                            titleAttr: 'Imprimir documento',
+                            className: 'btn btn-light'
+                        },
+                        {
+                            extend: 'colvis',
+                            text: '<i class="bi bi-funnel"></i> Filtrar',
+                            titleAttr: 'Filtrar datos requeridos',
+                            className: 'btn btn-warning'
+                        },
+                    ]
+                }
+            } );
+        
+            table.buttons().container()
+                .appendTo( '#example_wrapper .col-md-6:eq(0) ' );
+        } );
+    </script>
+    <body>
+        <br>
+        <div class="container">
+            <div class="table-responsive">
+                <table id="example" class="table table-striped">
+                    <thead style="background-color: #dda24e; opacity: 70%;">
+                        <tr class="align-middle">
+                            <th style="text-align: center;color: #1f4a6d;">ID</th>
+                            <th style="text-align: center;color: #1f4a6d">Nombre Empresa</th>
+                            <th style="text-align: center;color: #1f4a6d">NIT</th>
+                            <th style="text-align: center;color: #1f4a6d">Telefono</th>
+                            <th style="text-align: center;color: #1f4a6d">Encargado</th>
+                            <th style="text-align: center;color: #1f4a6d">Tipo de Documento</th>
+                            <th style="text-align: center;color: #1f4a6d">Numero Documento</th>
+                            <th style="text-align: center;color: #1f4a6d">Estado</th>
+                            <th style="text-align: center;color: #1f4a6d">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody style="opacity: 80%;" class="table table-striped table-hover table-dark">
+                        <tr>
+                            <td>001</td>
+                            <td>Eco Mundo</td>
+                            <td>298139871298</td>
+                            <td>318806034</td>
+                            <td>Juan Perez</td>
+                            <td>Cedula</td>
+                            <td>1022382293</td>
+                            <td>
+                                <div class="form-check form-switch p-0">
+                                    <div class="d-flex flex-column gap-1">
+                                        <input class="form-check-input ms-0" type="checkbox" role="switch"
+                                            id="switchCheckLabelBottom" style="align-self: center;" />
+                                        <label class="form-check-label" for="switchCheckLabelBottom"
+                                            style="text-align: center; color: #90adca;">Activado</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center;"><button type="button"
+                                    class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#edit_emergente_proveedores"><i
+                                        class="fa-regular fa-pen-to-square"
+                                        style="color: #50ce69;"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js" type="text/Javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/Javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/Javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js" type="text/Javascript"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js" type="text/Javascript"></script>
+    </body>
+</section>
+
+
+
+
+
+
 {% endblock contenido %}
