@@ -45,6 +45,22 @@
           </div>
           <label for="floatingInput" for="validationCustom01" class="form-label">Nombre cliente</label>
         </div>
+        <div class="container mt-5">
+          <div class="btn-group" role="group" aria-label="Botón Sí/No">
+            <input type="hidden" id="opcion" value="no"> <!-- Input oculto para guardar el estado -->
+            <div class="container" style="color: #ffffff; font-weight: bold;">Calcular IVA   
+              <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off" onclick="cambiarOpcion('si')">Sí</button>
+              <button type="button" class="btn btn-danger" data-bs-toggle="button" aria-pressed="false" autocomplete="off" onclick="cambiarOpcion('no')">No</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <!-- Script para cambiar el valor del input oculto -->
+        <script>
+          function cambiarOpcion(opcion) {
+            document.getElementById('opcion').value = opcion;
+          }
+        </script>
         <div class="form-floating mb-3">
           <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
           <div class="valid-feedback">
@@ -156,300 +172,23 @@
                   <td>$35.500</td>
                   <td>$4.500</td>
                   <td>$40.000</td>
-                  <td>Activo</td>
-                  <td>Boton Editar</td>
+                  <td>
+                    <div class="form-check form-switch p-0">
+                        <div class="d-flex flex-column gap-1">
+                            <input class="form-check-input ms-0" type="checkbox" role="switch"
+                                id="switchCheckLabelBottom" style="align-self: center;" />
+                            <label class="form-check-label" for="switchCheckLabelBottom"
+                                style="text-align: center; color: #90adca;">Activado</label>
+                        </div>
+                    </div>
+                </td>
+                <td style="text-align: center;"><button type="button"
+                        class="btn btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#edit_detall_venta"><i
+                            class="fa-regular fa-pen-to-square"
+                            style="color: #50ce69;"></i></button>
+                </td>
               </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              <tr>
-                <td>001</td>
-                <td>12/12/2023</td>
-                <td>Andrea Torres</td>
-                <td>$35.500</td>
-                <td>$4.500</td>
-                <td>$40.000</td>
-                <td>Activo</td>
-                <td>Boton Editar</td>
-              </tr>
-              
           </tbody>
       </table>
   </div>
@@ -508,16 +247,11 @@
             </div>
             <label for="floatingInput" for="validationCustom01" class="form-label">Subtotal</label>
           </div>
-          <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-            <div class="valid-feedback">
-              ¡Dato Valido!
-            </div>
-            <div class="invalid-feedback">
-              Dato inválido, por favor, indique el IVA de la venta.
-            </div>
-            <label for="floatingInput" for="validationCustom01" class="form-label">IVA</label>
+          <div class="container" style="color: #ffffff; font-weight: bold;">Calcular IVA   
+            <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off" onclick="cambiarOpcion('si')">Sí</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="button" aria-pressed="false" autocomplete="off" onclick="cambiarOpcion('no')">No</button>
           </div>
+          <br>
           <div class="form-floating mb-3">
             <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required>
             <div class="valid-feedback">
